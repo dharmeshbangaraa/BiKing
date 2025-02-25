@@ -1,16 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, Button, Tabs, Tab } from "@mui/material";
-
-interface Bike {
-  id: number;
-  name: string;
-  price: string;
-  image: string;
-  category: string;
-}
+import Bike from "../../interfaces/Bike";
 
 const categories = ["Sport", "Cruiser", "Electric", "Adventure"];
-
 
 const FeaturedBike: React.FC = () => {
 
@@ -79,7 +71,7 @@ const FeaturedBike: React.FC = () => {
 
       <p className="text-xl font-grey-1000 mt-2">Featured Bikes</p>
 
-      <div className="border-b border-b-gray-300">
+      <div>
         {/* Category Tabs */}
         <Tabs
           value={selectedCategory}
@@ -97,6 +89,8 @@ const FeaturedBike: React.FC = () => {
               width: "fit-content",
               minWidth: "fit-content",
             },
+            borderBottom: 1,
+            borderColor: "divider",
           }}
         >
           {categories.map((category) => (
