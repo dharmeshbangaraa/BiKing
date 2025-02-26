@@ -34,27 +34,27 @@ const BikesUnder50k: React.FC = () => {
     }, []);
 
     return (
-        <div className="py-2">
-            <div className="grid grid-cols-1 md:grid-cols-3">
-                {bikes?.map((filteredBike) => (
-                    <Card key={filteredBike.id}>
-                        <img
-                            src={filteredBike.image}
-                            alt={filteredBike.name}
-                            className="w-full h-40 object-cover"
-                        />
-                        <CardContent className="bg-gray-50 p-4">
-                            <h3 className="text-sm font-semibold">{filteredBike.name}</h3>
-                            <p className="text-md font-semibold">&#8377; {filteredBike.price}</p>
-                            <p className="text-sm font-gray-600 mb-2">Avg. Ex-Showroom price</p>
-                            <Button variant="text" color="primary" fullWidth className="mt-2" sx={{ border: 1 }}>
-                                check out
-                            </Button>
-                        </CardContent>
+        <div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {bikes?.map((filteredBike) => (
+                    <Card key={filteredBike.id} className="hover:shadow-lg" sx={{ borderRadius: 5, borderWidth: 1, borderColor: "gray" }}>
+                      <img
+                        src={filteredBike.image}
+                        alt={filteredBike.name}
+                        className="w-full h-40 object-cover rounded"
+                      />
+                      <CardContent className="bg-gray-50 p-4">
+                        <h3 className="text-sm font-semibold">{filteredBike.name}</h3>
+                        <p className="text-md font-semibold">&#8377; {filteredBike.price}</p>
+                        <p className="text-sm font-gray-600 mb-2">Avg. Ex-Showroom price</p>
+                        <Button variant="text" color="primary" fullWidth className="mt-2" sx={{ border: 1 }}>
+                          check out
+                        </Button>
+                      </CardContent>
                     </Card>
-                ))}
-            </div>
-        </div>
+                  ))}
+                </div>
+              </div>
     )
 }
 

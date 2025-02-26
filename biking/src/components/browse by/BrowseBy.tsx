@@ -15,8 +15,7 @@ const BrowseBy: React.FC = () => {
 
 
     return (
-
-        <div className="container px-50">
+        <div className="container px-50 py-5">
             <p className="text-xl font-grey-1000 mt-2">Browse Bikes By</p>
             <div className="">
                 {/* Category Tabs */}
