@@ -5,6 +5,8 @@ import BrowseBy from "../browse by/BrowseBy";
 import Footer from "../footer/Footer";
 import Carousel from "../carousel/HomepageCarousel";
 import Searchbar from "../searchbar/Searchbar";
+import Scooters from "../popular scooters/PopularScooters";
+import GoGreen from "../banners/GoGreen";
 
 const HomePage: React.FC = () => {
 
@@ -27,6 +29,12 @@ const HomePage: React.FC = () => {
 
       {/* Browse by */}
       <BrowseBy />
+
+      {/* Go Green Banner */}
+      <GoGreen />
+
+      {/* Popular Scooters */}
+      <Scooters />
 
       {/* Footer */}
       <Footer />

@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 const images = [
     "src/assets/images/carousel/homepageCarousel1.jpg",
-    "src/assets/images/carousel/homepageCarousel2.jpg",
     "src/assets/images/carousel/homepageCarousel3.jpg",
 ];
 

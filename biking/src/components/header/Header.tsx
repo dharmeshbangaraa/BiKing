@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Typography, TextField, IconButton, Drawer, List, ListItemButton, ListItemText, ListItemIcon, Modal, Fade, Box, Backdrop } from "@mui/material";
+import { AppBar, Toolbar, TextField, IconButton, Drawer, List, ListItemButton, ListItemText, ListItemIcon, Modal, Fade, Box, Backdrop } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import TwoWheelerTwoToneIcon from '@mui/icons-material/TwoWheelerTwoTone';
 import MopedTwoToneIcon from '@mui/icons-material/MopedTwoTone';
@@ -37,28 +37,37 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
 
   return (
     <>
-      <AppBar position="sticky">
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => toggleDrawer(true)}>
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            BiKing.com
-          </Typography>
-          <TextField
-            label="Search bikes..."
-            variant="outlined"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            size="small"
-            sx={{ backgroundColor: "white", borderRadius: 1 }}
-          />
-          <IconButton sx={{ paddingX: 2 }}>
-            <AddLocationAltTwoToneIcon htmlColor="white" onClick={handleOpen} />
-          </IconButton>
-          <IconButton>
-            <PersonTwoToneIcon htmlColor="white" />
-          </IconButton>
+      <AppBar position="sticky" color="inherit">
+        <Toolbar className="flex justify-between items-center w-full">
+          {/* Left Section: Logo */}
+          <div className="flex items-center cursor-pointer">
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => toggleDrawer(true)} sx={{marginTop: 1}} >
+              <MenuIcon sx={{ fontSize: 30, color: "gray"}}/>
+            </IconButton>
+            <img
+              src="src/assets/images/brand logo/biking-logo.jpg"
+              alt="BiKing Logo"
+              className="h-12 w-auto"
+            />
+          </div>
+
+          {/* Right Section: Search Bar and Icons */}
+          <div className="flex items-center gap-3">
+            <TextField
+              label="Search"
+              variant="outlined"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              size="small"
+              sx={{ backgroundColor: "white", borderRadius: 1 }}
+            />
+            <IconButton sx={{ paddingX: 2 }}>
+              <AddLocationAltTwoToneIcon onClick={handleOpen} />
+            </IconButton>
+            <IconButton>
+              <PersonTwoToneIcon />
+            </IconButton>
+          </div>
         </Toolbar>
       </AppBar>
 
