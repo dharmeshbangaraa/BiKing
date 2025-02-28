@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardContent, Button, Tabs, Tab } from "@mui/material";
+import { Card, CardContent, Button, Tabs, Tab, Typography } from "@mui/material";
 import Bike from "../../interfaces/Bike";
 
 const categories = ["Sport", "Cruiser", "Electric", "Adventure"];
@@ -67,9 +67,15 @@ const FeaturedBike: React.FC = () => {
     : null;
 
   return (
-    <div className="container px-50">
+    <div className="container px-40">
 
-      <p className="text-xl font-grey-1000 mt-2">Featured Bikes</p>
+      <Typography
+        marginTop={2}
+        fontSize={24}
+        fontWeight={"bold"}
+      >
+        Featured Bikes
+      </Typography>
 
       <div>
         {/* Category Tabs */}

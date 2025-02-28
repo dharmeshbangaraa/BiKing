@@ -5,7 +5,7 @@ import React from "react";
 const GoGreen: React.FC = () => {
 
     return (
-        <div className="container px-50 py-5">
+        <div className="container px-40 py-1">
             <div className="border-2 border-green-600 bg-green-100 flex">
                 <div className="flex-1/3">
                     <img src="src/assets/images/logos/go-green-logo.png" alt="go-green-logo" className="h-20" />

@@ -1,4 +1,4 @@
-import { Tabs, Tab } from "@mui/material";
+import { Tabs, Tab, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Brands from "./Brands";
 import Budget from "./Budget";
@@ -15,8 +15,14 @@ const BrowseBy: React.FC = () => {
 
 
     return (
-        <div className="container px-50 py-5">
-            <p className="text-xl font-grey-1000 mt-2">Browse Bikes By</p>
+        <div className="container px-40 py-5">
+            <Typography
+                marginTop={2}
+                fontSize={24}
+                fontWeight={"bold"}
+            >
+                Browse By
+            </Typography>
             <div className="">
                 {/* Category Tabs */}
                 <Tabs
