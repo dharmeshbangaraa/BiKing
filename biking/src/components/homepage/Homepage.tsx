@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "../header/Header";
 import FeaturedBike from "../featured bikes/FeaturedBikes";
 import BrowseBy from "../browse by/BrowseBy";
-import Footer from "../footer/Footer";
 import Carousel from "../carousel/HomepageCarousel";
 import Searchbar from "../searchbar/Searchbar";
 import Scooters from "../popular scooters/PopularScooters";
@@ -35,9 +34,6 @@ const HomePage: React.FC = () => {
 
       {/* Popular Scooters */}
       <Scooters />
-
-      {/* Footer */}
-      <Footer />
 
     </div>
   );
