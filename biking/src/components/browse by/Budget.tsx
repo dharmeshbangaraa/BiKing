@@ -8,7 +8,7 @@ const Budget: React.FC = () => {
     const [value, setValue] = React.useState(0);
 
     return (
-        <Box>
+        <Box sx={{paddingBottom: 2}}>
             <BottomNavigation
                 showLabels
                 value={value}

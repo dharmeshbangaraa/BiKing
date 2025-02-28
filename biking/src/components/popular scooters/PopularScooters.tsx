@@ -13,7 +13,7 @@ const PopularScooters: React.FC = () => {
     };
 
     return (
-        <div className="container px-40 py-5">
+        <div className="container px-40 py-2">
             <Typography
                 marginTop={2}
                 fontSize={24}
@@ -48,13 +48,14 @@ const PopularScooters: React.FC = () => {
                             label={category}
                             value={category}
                             sx={{
-                                color: "black",
+                                color: "grey",
+                                fontWeight: "bold",
                             }}
                         />
                     ))}
                 </Tabs>
             </div>
-            <div className=" text-center p-0">
+            <div className="p-0">
                 {selectedCategory === "Scooters" && <Scooters />}
             </div>
         </div>

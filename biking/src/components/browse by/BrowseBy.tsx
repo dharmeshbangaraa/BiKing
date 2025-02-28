@@ -50,13 +50,14 @@ const BrowseBy: React.FC = () => {
                             label={category}
                             value={category}
                             sx={{
-                                color: "black",
+                                color: "grey",
+                                fontWeight: "bold",
                             }}
                         />
                     ))}
                 </Tabs>
             </div>
-            <div className=" text-center p-0">
+            <div className="p-0">
                 {selectedCategory === "Brand" && <Brands />}
                 {selectedCategory === "Budget" && <Budget />}
                 {selectedCategory === "Displacement" && <Displacement />}

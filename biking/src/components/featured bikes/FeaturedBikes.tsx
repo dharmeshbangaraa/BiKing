@@ -105,7 +105,8 @@ const FeaturedBike: React.FC = () => {
               label={category}
               value={category}
               sx={{
-                color: "black",
+                color: "grey",
+                fontWeight: "bold",
               }}
             />
           ))}
@@ -123,10 +124,10 @@ const FeaturedBike: React.FC = () => {
                 className="w-full h-40 object-cover rounded"
               />
               <CardContent className="bg-gray-50 p-4">
-                <h3 className="text-sm font-semibold">{filteredBike.name}</h3>
-                <p className="text-md font-semibold">&#8377; {filteredBike.price}</p>
-                <p className="text-sm font-gray-600 mb-2">Avg. Ex-Showroom price</p>
-                <Button variant="text" color="primary" fullWidth className="mt-2" sx={{ border: 1 }}>
+                <h3 className="text-md font-semibold">{filteredBike.name}</h3>
+                <p className="text-md font-semibold flex">&#8377; {filteredBike.price} <span className="pl-1">Onwards</span></p>
+                <span className="text-sm mb-2">Avg. Ex-Showroom price</span>
+                <Button variant="text" color="primary" fullWidth sx={{ border: 1, marginTop: 2, borderRadius: 2 }}>
                   check out
                 </Button>
               </CardContent>

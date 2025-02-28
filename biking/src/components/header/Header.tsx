@@ -41,11 +41,11 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
         <Toolbar className="flex justify-between items-center w-full">
           {/* Left Section: Logo */}
           <div className="flex items-center cursor-pointer">
-            <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => toggleDrawer(true)} sx={{marginTop: 1}} >
-              <MenuIcon sx={{ fontSize: 30, color: "gray"}}/>
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => toggleDrawer(true)} sx={{ marginTop: 1 }} >
+              <MenuIcon sx={{ fontSize: 30, color: "gray" }} />
             </IconButton>
             <img
-              src="src/assets/images/brand logo/biking-logo.jpg"
+              src="src/assets/images/biking/biking-logo.jpg"
               alt="BiKing Logo"
               className="h-12 w-auto"
             />
@@ -62,10 +62,10 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
               sx={{ backgroundColor: "white", borderRadius: 1 }}
             />
             <IconButton sx={{ paddingX: 2 }}>
-              <AddLocationAltTwoToneIcon onClick={handleOpen} />
+              <AddLocationAltTwoToneIcon onClick={handleOpen} color="primary" />
             </IconButton>
             <IconButton>
-              <PersonTwoToneIcon />
+              <PersonTwoToneIcon color="primary" />
             </IconButton>
           </div>
         </Toolbar>
