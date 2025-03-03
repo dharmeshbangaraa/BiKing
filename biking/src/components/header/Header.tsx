@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
               <MenuIcon sx={{ fontSize: 30, color: "gray" }} />
             </IconButton>
             <img
-              src="public/images/biking/biking-logo.jpg"
+              src="/images/biking/biking-logo.jpg"
               alt="BiKing Logo"
               className="h-12 w-auto"
             />

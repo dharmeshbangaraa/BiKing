@@ -11,42 +11,42 @@ const FeaturedBike: React.FC = () => {
     name: "Royal Enfield Himalayan",
     price: "3,00,000",
     category: "Adventure",
-    image: "/public/images/bikes/himalayan.jpg"
+    image: "/images/bikes/himalayan.jpg"
   },
   {
     id: 2,
     name: "Kawasaki Ninja 300",
     price: "3,40,000",
     category: "Sport",
-    image: "public/images/bikes/Ninja300.jpg"
+    image: "/images/bikes/Ninja300.jpg"
   },
   {
     id: 3,
     name: "KTM RC 390",
     price: "3,40,000",
     category: "Sport",
-    image: "public/images/bikes/RC390.jpg"
+    image: "/images/bikes/RC390.jpg"
   },
   {
     id: 4,
     name: "Yamaha R3",
     price: "4,40,000",
     category: "Sport",
-    image: "public/images/bikes/R3.jpg"
+    image: "/images/bikes/R3.jpg"
   },
   {
     id: 5,
     name: "Bajaj Avenger Cruise 220",
     price: "1,40,000",
     category: "Cruiser",
-    image: "public/images/bikes/avenger220.jpg"
+    image: "/images/bikes/avenger220.jpg"
   },
   {
     id: 6,
     name: "Ather 450X",
     price: "1,50,000",
     category: "Electric",
-    image: "public/images/bikes/ather450x.jpg"
+    image: "/images/bikes/ather450x.jpg"
   }]);
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>("Sport");

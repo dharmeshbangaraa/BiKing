@@ -9,21 +9,21 @@ const BikesUnder50k: React.FC = () => {
     name: "Royal Enfield Himalayan",
     price: "3,00,000",
     category: "Adventure",
-    image: "/public/images/bikes/himalayan.jpg"
+    image: "/images/bikes/himalayan.jpg"
   },
   {
     id: 2,
     name: "Kawasaki Ninja 300",
     price: "3,40,000",
     category: "Sport",
-    image: "/public/images/bikes/Ninja300.jpg"
+    image: "/images/bikes/Ninja300.jpg"
   },
   {
     id: 3,
     name: "KTM RC 390",
     price: "3,40,000",
     category: "Sport",
-    image: "/public/images/bikes/RC390.jpg"
+    image: "/images/bikes/RC390.jpg"
   }]);
 
   useEffect(() => {
