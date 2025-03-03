@@ -10,21 +10,21 @@ const Scooters: React.FC = () => {
         name: "TVS Jupiter",
         price: "98,344",
         category: "Scooter",
-        image: "/public/images/scooters/jupiter.jpg"
+        image: "/images/scooters/jupiter.jpg"
     },
     {
         id: 2,
         name: "Suzuki Access 125",
         price: "1,00,710",
         category: "Scooter",
-        image: "/public/images/scooters/access125.jpg"
+        image: "/images/scooters/access125.jpg"
     },
     {
         id: 3,
         name: "Honda Activa 6G",
         price: "97,000",
         category: "Scooter",
-        image: "/public/images/scooters/activa6g.jpg"
+        image: "/images/scooters/activa6g.jpg"
     }
 
     ]);
