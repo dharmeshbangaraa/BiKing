@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-    "src/assets/images/carousel/homepageCarousel1.jpg",
-    "src/assets/images/carousel/homepageCarousel3.jpg",
+    "public/images/carousel/homepageCarousel1.jpg",
+    "public/images/carousel/homepageCarousel3.jpg",
 ];
 
 const Carousel: React.FC = () => {

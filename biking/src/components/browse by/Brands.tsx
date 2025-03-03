@@ -11,42 +11,42 @@ const Brands: React.FC = () => {
             {
                 id: 1,
                 name: "Royal Enfield",
-                img: "src/assets/images/bike-brand-logos/royal-enfield-logo.png"
+                img: "public/images/bike-brand-logos/royal-enfield-logo.png"
             },
             {
                 id: 2,
                 name: "Honda",
-                img: "src/assets/images/bike-brand-logos/honda-logo.png"
+                img: "public/images/bike-brand-logos/honda-logo.png"
             },
             {
                 id: 3,
                 name: "Suzuki",
-                img: "src/assets/images/bike-brand-logos/suzuki-logo.png"
+                img: "public/images/bike-brand-logos/suzuki-logo.png"
             },
             {
                 id: 4,
                 name: "BMW",
-                img: "src/assets/images/bike-brand-logos/bmw-logo.jpg"
+                img: "public/images/bike-brand-logos/bmw-logo.jpg"
             },
             {
                 id: 5,
                 name: "Yamaha",
-                img: "src/assets/images/bike-brand-logos/yamaha-logo.jpg"
+                img: "public/images/bike-brand-logos/yamaha-logo.jpg"
             },
             {
                 id: 6,
                 name: "Hero",
-                img: "src/assets/images/bike-brand-logos/hero-logo.jpg"
+                img: "public/images/bike-brand-logos/hero-logo.jpg"
             },
             {
                 id: 7,
                 name: "Bajaj",
-                img: "src/assets/images/bike-brand-logos/bajaj-logo.jpg"
+                img: "public/images/bike-brand-logos/bajaj-logo.jpg"
             },
             {
                 id: 8,
                 name: "Triumph",
-                img: "src/assets/images/bike-brand-logos/triumph-logo.jpg"
+                img: "public/images/bike-brand-logos/triumph-logo.jpg"
             },
         ]
     );
