@@ -8,12 +8,21 @@ const Displacement: React.FC = () => {
     const [value, setValue] = React.useState(0);
 
     return (
-        <Box sx={{paddingBottom: 2}}>
+        <Box sx={{ paddingBottom: 2 }}>
             <BottomNavigation
                 showLabels
                 value={value}
                 onChange={(_event, newValue) => {
                     setValue(newValue);
+                }}
+                sx={{
+                    "@media (max-width: 600px)": {
+                        overflowX: "auto",
+                        justifyContent: "start",
+                        "&::-webkit-scrollbar": {
+                            display: "none", // Hide scrollbar for Chrome, Safari, Edge
+                        },
+                    }
                 }}
             >
                 <BottomNavigationAction label="Under 110cc" />

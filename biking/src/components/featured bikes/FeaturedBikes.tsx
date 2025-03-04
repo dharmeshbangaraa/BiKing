@@ -67,7 +67,7 @@ const FeaturedBike: React.FC = () => {
     : null;
 
   return (
-    <div className="container px-40">
+    <div className="lg:px-40 px-5">
 
       <Typography
         marginTop={2}
@@ -121,7 +121,7 @@ const FeaturedBike: React.FC = () => {
               <img
                 src={filteredBike.image}
                 alt={filteredBike.name}
-                className="w-full h-40 object-cover rounded"
+                className="w-full h-fit rounded"
               />
               <CardContent className="bg-gray-50 p-4">
                 <h3 className="text-md font-semibold">{filteredBike.name}</h3>

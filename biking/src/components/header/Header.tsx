@@ -42,29 +42,42 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
           {/* Left Section: Logo */}
           <div className="flex items-center cursor-pointer">
             <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => toggleDrawer(true)} sx={{ marginTop: 1 }} >
-              <MenuIcon sx={{ fontSize: 30, color: "gray" }} />
+              <MenuIcon sx={{
+                fontSize: 20, color: "black", "@media (min-width: 1200px)": {
+                  fontSize: 30,
+                  color: "gray"
+                },
+              }} />
             </IconButton>
             <img
               src="/images/biking/biking-logo.jpg"
               alt="BiKing Logo"
-              className="h-12 w-auto"
+              className="lg:h-12 lg:w-auto h-10"
             />
           </div>
 
           {/* Right Section: Search Bar and Icons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center lg:gap-3">
             <TextField
               label="Search"
               variant="outlined"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               size="small"
-              sx={{ backgroundColor: "white", borderRadius: 1 }}
+              sx={{
+                backgroundColor: "white", borderRadius: 1, "@media (max-width: 600px)": {
+                  visibility: "hidden"
+                },
+              }}
             />
-            <IconButton sx={{ paddingX: 2 }}>
+            <IconButton sx={{
+              padding: 1,
+            }}>
               <AddLocationAltTwoToneIcon onClick={handleOpen} color="primary" />
             </IconButton>
-            <IconButton>
+            <IconButton sx={{
+              padding: 1,
+            }}>
               <PersonTwoToneIcon color="primary" />
             </IconButton>
           </div>

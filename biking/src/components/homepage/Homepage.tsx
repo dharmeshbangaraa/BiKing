@@ -6,22 +6,23 @@ import Carousel from "../carousel/HomepageCarousel";
 import Searchbar from "../searchbar/Searchbar";
 import Scooters from "../popular scooters/PopularScooters";
 import GoGreen from "../banners/GoGreen";
+import Footer from "../footer/Footer";
 
 const HomePage: React.FC = () => {
 
   const [search, setSearch] = useState("");
 
   return (
-    <div className="container">
+    <div>
 
       {/* Sticky Header */}
       <Header search={search} setSearch={setSearch} />
 
-      {/* Homepage Searchbar */}
-      <Searchbar />
-
       {/* Homepage Carousel */}
       <Carousel />
+
+      {/* Homepage Searchbar */}
+      <Searchbar />
 
       {/* Featured Bikes */}
       <FeaturedBike />
@@ -34,6 +35,9 @@ const HomePage: React.FC = () => {
 
       {/* Popular Scooters */}
       <Scooters />
+
+      {/* Footer */}
+      <Footer />
 
     </div>
   );

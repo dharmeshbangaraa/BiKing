@@ -8,12 +8,18 @@ const Searchbar: React.FC = () => {
 
     return (
 
-        <div className="absolute top-8/9 left-1/2 transform -translate-x-1/2 -translate-y-8/9 z-10 w-3/4 sm:w-1/2">
+        <div className="lg:absolute lg:top-8/9 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-8/9 lg:z-10 lg:w-3/4 md:justify-items-center lg:justify-items-normal p-5">
             <Typography sx={{
-                color: "white",
+                color: "black",
                 fontWeight: "bold",
-                fontSize: 20,
+                fontSize: 15,
                 fontFamily: "LatoGoogle, sans-serif",
+                "@media (min-width: 1200px)": {
+                    color: "white",
+                    fontWeight: "bold",
+                    fontSize: 20,
+                    fontFamily: "LatoGoogle, sans-serif",
+                },
             }}>Let's search your DREAM bike together!</Typography>
             <TextField
                 placeholder="Try Royal Enfield Himalayan"
@@ -22,7 +28,7 @@ const Searchbar: React.FC = () => {
                 size="small"
                 focused={false}
                 onChange={(e) => setSearch(e.target.value)}
-                sx={{padding: "none"}}
+                sx={{ padding: "none" }}
             />
         </div>
     );

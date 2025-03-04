@@ -83,16 +83,19 @@ const Brands: React.FC = () => {
                     <Grid
                         key={brand.id}
                         size={{
-                            xs: 12,
+                            xs: 4,
                             sm: 6,
                             md: 4,
                             lg: 3,
                         }}
                         sx={{
                             height: 150, // Sets consistent height
+                            "@media (max-width: 600px)": {
+                                height: 120
+                            }
                         }}
                     >
-                        <div className="text-center flex justify-center p-4">
+                        <div className="text-center flex justify-center lg:p-4">
                             <img src={brand.img} alt={`${brand.name}` + ` logo`} className="h-20 w-auto object-contain" />
                         </div>
                         <div className="text-center">

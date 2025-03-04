@@ -44,7 +44,7 @@ const Scooters: React.FC = () => {
                         <img
                             src={filteredScooter.image}
                             alt={filteredScooter.name}
-                            className="w-full h-40 object-cover rounded"
+                            className="w-full h-fit object-cover rounded"
                         />
                         <CardContent className="bg-gray-50 p-4">
                             <h3 className="text-md font-semibold">{filteredScooter.name}</h3>

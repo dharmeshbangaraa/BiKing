@@ -13,7 +13,7 @@ const PopularScooters: React.FC = () => {
     };
 
     return (
-        <div className="container px-40 py-2">
+        <div className="lg:px-40 lg:py-2 px-5">
             <Typography
                 marginTop={2}
                 fontSize={24}

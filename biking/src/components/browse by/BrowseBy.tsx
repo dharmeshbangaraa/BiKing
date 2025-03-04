@@ -15,7 +15,7 @@ const BrowseBy: React.FC = () => {
 
 
     return (
-        <div className="container px-40 py-5">
+        <div className="lg:px-40 lg:py-5 px-5">
             <Typography
                 marginTop={2}
                 fontSize={24}
