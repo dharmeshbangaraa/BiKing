@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4  # Ensures repository is cloned correctly
 
       - name: Debug:List Files in Workspace
-        run: ls
+        run: ls -la biking
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -45,4 +45,4 @@ jobs:
             # -Dsonar.tests=src/__tests__  # Define test folder (update if different)
             # -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info  # Use test coverage reports
 
-          projectBaseDir: ./biking  # Ensure correct project directory
+          projectBaseDir: biking
