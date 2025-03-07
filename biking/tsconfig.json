@@ -4,5 +4,5 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-  "exclude": ["src/tests", "src/**/*.test.tsx", "src/**/*.test.ts"]
+  "exclude": ["src/tests/components/*", "src/**/*.test.tsx", "src/**/*.test.ts"]
 }
