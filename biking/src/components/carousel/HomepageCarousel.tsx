@@ -3,12 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = [
-    "/images/carousel/homepageCarousel1.jpg",
-    "/images/carousel/homepageCarousel3.jpg",
-];
+
 
 const Carousel: React.FC = () => {
+
+    const images = [
+        "/images/carousel/homepageCarousel1.jpg",
+        "/images/carousel/homepageCarousel3.jpg",
+    ];
 
     const settings = {
         infinite: true,
