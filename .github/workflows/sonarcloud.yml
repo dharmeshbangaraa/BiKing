@@ -41,8 +41,9 @@ jobs:
             -Dsonar.organization=biking
             -Dsonar.sources=src  # Explicitly defining source directory
             -Dsonar.verbose=true  # Enable detailed logs for debugging
-            
-            # -Dsonar.tests=src/__tests__  # Define test folder (update if different)
-            # -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info  # Use test coverage reports
+            -Dsonar.tests=src/tests,src/tests/components/**/*.test.tsx, src/tests/components/*.test.tsx
+            -Dsonar.exclusions=**/*.test.ts,**/*.test.tsx,**/__mocks__/**,**/__tests__/**
+            -Dsonar.test.inclusions=src/tests/**/*.test.ts,src/tests/**/*.test.tsx,src/tests/components/**/*.test.tsx
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
 
           projectBaseDir: biking
