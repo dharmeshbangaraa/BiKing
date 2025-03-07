@@ -1,0 +1,48 @@
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+permissions:
+  pull-requests: read # Allows SonarCloud to decorate PRs with analysis results
+
+jobs:
+  sonarcloud:
+    name: SonarCloud Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4  # Ensures repository is cloned correctly
+
+      - name: Debug:List Files in Workspace
+        run: ls -la biking
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@4006f663ecaf1f8093e8e4abb9227f6041f52216
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Ensure this secret is set in GitHub
+
+        with:
+          args: >
+            -Dsonar.projectKey=dharmeshbangaraa_BiKing
+            -Dsonar.organization=biking
+            -Dsonar.sources=src  # Explicitly defining source directory
+            -Dsonar.verbose=true  # Enable detailed logs for debugging
+            
+            # -Dsonar.tests=src/__tests__  # Define test folder (update if different)
+            # -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info  # Use test coverage reports
+
+          projectBaseDir: biking
