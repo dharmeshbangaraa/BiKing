@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardContent, Button, Tabs, Tab, Typography } from "@mui/material";
+import { Card, CardContent, Button, Typography } from "@mui/material";
 import Bike from "../../interfaces/Bike";
+import TabsComponent from "../utils/Tabs";
 
 const categories = ["Sport", "Cruiser", "Electric", "Adventure"];
 
@@ -77,41 +78,7 @@ const FeaturedBike: React.FC = () => {
         Featured Bikes
       </Typography>
 
-      <div>
-        {/* Category Tabs */}
-        <Tabs
-          value={selectedCategory}
-          onChange={handleCategoryChange}
-          indicatorColor="primary"
-          textColor="primary"
-          className="pt-2"
-          sx={{
-            ".MuiButtonBase-root": {
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "flex-start", // Ensures tabs are not centered
-              paddingX: 0,
-              marginRight: 2,
-              width: "fit-content",
-              minWidth: "fit-content",
-            },
-            borderBottom: 1,
-            borderColor: "divider",
-          }}
-        >
-          {categories.map((category) => (
-            <Tab
-              key={category}
-              label={category}
-              value={category}
-              sx={{
-                color: "grey",
-                fontWeight: "bold",
-              }}
-            />
-          ))}
-        </Tabs>
-      </div>
+      <TabsComponent categories={categories} selectedCategory={selectedCategory} categoryOnChange={handleCategoryChange} />
 
       {/* Bike Listings */}
       <div className="my-5">
