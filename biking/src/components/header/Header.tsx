@@ -118,12 +118,12 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
       >
         <List>
           {[
-            { icon: <TwoWheelerTwoToneIcon />, text: "New Bikes" },
-            { icon: <MopedTwoToneIcon />, text: "New Scooter" },
-            { icon: <ElectricMopedTwoToneIcon />, text: "Electric" },
-            { icon: <CalculateTwoToneIcon />, text: "EMI Calculator" },
-          ].map((item, index) => (
-            <ListItemButton key={index} onClick={() => toggleDrawer(false)} sx={{ gap: 0 }}>
+            { id: 1, icon: <TwoWheelerTwoToneIcon />, text: "New Bikes" },
+            { id: 2, icon: <MopedTwoToneIcon />, text: "New Scooter" },
+            { id: 3, icon: <ElectricMopedTwoToneIcon />, text: "Electric" },
+            { id: 4, icon: <CalculateTwoToneIcon />, text: "EMI Calculator" },
+          ].map((item) => (
+            <ListItemButton key={item.id} onClick={() => toggleDrawer(false)} sx={{ gap: 0 }}>
               <ListItemIcon sx={{ minWidth: 35 }}>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItemButton>
