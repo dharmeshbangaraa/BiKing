@@ -3,10 +3,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = [
-    "/images/carousel/homepageCarousel1.jpg",
-    "/images/carousel/homepageCarousel3.jpg",
+
+interface CarouselImage {
+    id: number;
+    src: string;
+}
+
+const images: CarouselImage[] = [{
+    id: 1,
+    src: "/images/carousel/homepageCarousel1.jpg"
+},
+{
+    id: 2,
+    src: "/images/carousel/homepageCarousel3.jpg"
+}
 ];
+
 
 const Carousel: React.FC = () => {
 
@@ -23,9 +35,9 @@ const Carousel: React.FC = () => {
     return (
         <div className="w-full mx-auto">
             <Slider {...settings}>
-                {images.map((img, index) => (
-                    <div key={index} className="flex justify-center">
-                        <img src={img} alt={`Slide ${index}`} className="w-full h-120 object-cover" />
+                {images.map((img) => (
+                    <div key={img.id} className="flex justify-center">
+                        <img src={img.src} alt={`Slide ${img.id}`} className="w-full h-120 object-cover" />
                     </div>
                 ))}
             </Slider>

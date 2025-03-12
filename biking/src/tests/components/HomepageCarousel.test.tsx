@@ -8,9 +8,6 @@ vi.mock("react-slick", () => ({
 }));
 
 describe("test should render carousel component", () => {
-    it("test should render all images in carousel component successfully", () => {
-        render(<Carousel />);
-    });
 
     it("test should assert image tag in the carousel", () => {
         render(<Carousel />);
@@ -25,8 +22,8 @@ describe("test should render carousel component", () => {
     it("test should assert all images in the carousel", () => {
         render(<Carousel />);
 
-        expect(screen.getByAltText("Slide 0")).toBeInTheDocument();
         expect(screen.getByAltText("Slide 1")).toBeInTheDocument();
+        expect(screen.getByAltText("Slide 2")).toBeInTheDocument();
     });
 
 });

@@ -9,7 +9,7 @@ describe('test should render every component of homepage successfully', () => {
         render(<Homepage />)
 
         expect(screen.getByRole('banner')).toBeInTheDocument();
-        expect(screen.getByText("Let's search your DREAM bike together!"));
+        expect(screen.getByText("Let's search your DREAM bike together!")).toBeInTheDocument();
         expect(screen.getAllByRole('textbox')).toHaveLength(2);
         expect(screen.getByText('Featured Bikes')).toBeInTheDocument();
         expect(screen.getByText('Browse By')).toBeInTheDocument();
