@@ -41,7 +41,7 @@ const BikesUnder50k: React.FC = () => {
             <img
               src={filteredBike.image}
               alt={filteredBike.name}
-              className="w-full h-40 object-cover rounded"
+              className="w-fit h-[200px] p-3 object-fit rounded m-auto"
             />
             <CardContent className="bg-gray-50 p-4">
               <h3 className="text-md font-semibold">{filteredBike.name}</h3>

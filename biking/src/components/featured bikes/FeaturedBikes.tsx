@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Card, CardContent, Button, Typography } from "@mui/material";
 import Bike from "../../interfaces/Bike";
 import TabsComponent from "../utils/Tabs";
+import { useNavigate } from "react-router-dom";
 
 const categories = ["Sport", "Cruiser", "Electric", "Adventure"];
 
 const FeaturedBike: React.FC = () => {
+
+  const navigate = useNavigate();
 
   const [bikes, setBikes] = useState<Bike[]>([{
     id: 1,
@@ -88,13 +91,13 @@ const FeaturedBike: React.FC = () => {
               <img
                 src={filteredBike.image}
                 alt={filteredBike.name}
-                className="w-full h-fit rounded"
+                className="w-fit h-[200px] p-3 object-fit rounded m-auto"
               />
               <CardContent className="bg-gray-50 p-4">
                 <h3 className="text-md font-semibold">{filteredBike.name}</h3>
                 <p className="text-md font-semibold flex">&#8377; {filteredBike.price} <span className="pl-1">Onwards</span></p>
                 <span className="text-sm mb-2">Avg. Ex-Showroom price</span>
-                <Button variant="text" color="primary" fullWidth sx={{ border: 1, marginTop: 2, borderRadius: 2 }}>
+                <Button variant="text" color="primary" fullWidth sx={{ border: 1, marginTop: 2, borderRadius: 2 }} onClick={() => navigate(`checkout/${filteredBike.name}`)}>
                   check out
                 </Button>
               </CardContent>
