@@ -7,6 +7,7 @@ import ElectricMopedTwoToneIcon from '@mui/icons-material/ElectricMopedTwoTone';
 import CalculateTwoToneIcon from '@mui/icons-material/CalculateTwoTone';
 import AddLocationAltTwoToneIcon from '@mui/icons-material/AddLocationAltTwoTone';
 import PersonTwoToneIcon from '@mui/icons-material/PersonTwoTone';
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
   search: string;
@@ -37,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
 
   return (
     <>
-      <AppBar position="sticky" color="inherit">
+      <AppBar position="sticky" color="inherit" data-testid="header">
         <Toolbar className="flex justify-between items-center w-full">
           {/* Left Section: Logo */}
           <div className="flex items-center cursor-pointer">
@@ -49,11 +50,13 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
                 },
               }} />
             </IconButton>
-            <img
-              src="/images/biking/biking-logo.jpg"
-              alt="BiKing Logo"
-              className="lg:h-12 lg:w-auto h-10"
-            />
+            <Link to={'/'} >
+              <img
+                src="/images/biking/biking-logo.jpg"
+                alt="BiKing Logo"
+                className="lg:h-12 lg:w-auto h-10"
+              />
+            </Link>
           </div>
 
           {/* Right Section: Search Bar and Icons */}
