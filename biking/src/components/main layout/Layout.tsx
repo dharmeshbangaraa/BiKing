@@ -12,7 +12,7 @@ const Layout = () => {
             <Header search={search} setSearch={setSearch} />
 
             {/* Renders the current route (Homepage, BikeDetails, etc.) */}
-            <Outlet />
+            <Outlet data-testid="outlet" />
 
             {/* Footer */}
             <Footer />

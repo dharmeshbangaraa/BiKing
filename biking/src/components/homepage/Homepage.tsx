@@ -8,7 +8,7 @@ import GoGreen from "../banners/GoGreen";
 const HomePage: React.FC = () => {
 
   return (
-    <div>
+    <div data-testid="homepage">
 
       {/* Homepage Carousel */}
       <Carousel />

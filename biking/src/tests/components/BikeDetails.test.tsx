@@ -3,7 +3,6 @@ import { describe, it, expect } from "vitest"
 import "@testing-library/jest-dom"
 import BikeDetails from "../../components/bike details/BikeDetails"
 
-
 describe("test should render Bike Details component successfully", () => {
     it("test should return all elements of Bike Details component", () => {
         

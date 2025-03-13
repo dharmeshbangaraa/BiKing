@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ search, setSearch }) => {
 
   return (
     <>
-      <AppBar position="sticky" color="inherit">
+      <AppBar position="sticky" color="inherit" data-testid="header">
         <Toolbar className="flex justify-between items-center w-full">
           {/* Left Section: Logo */}
           <div className="flex items-center cursor-pointer">
