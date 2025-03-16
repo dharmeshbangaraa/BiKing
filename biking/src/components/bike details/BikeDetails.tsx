@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Button } from "@mui/material";
+import KeySpecs from "./KeySpecs"
 
 const BikeDetails: React.FC = () => {
 
@@ -64,6 +65,9 @@ const BikeDetails: React.FC = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <KeySpecs />
             </div>
         </div>
     );
