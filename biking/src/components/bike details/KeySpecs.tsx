@@ -7,7 +7,7 @@ const KeySpecs: React.FC = () => {
 
         <div>
             <div className="lg:flex">
-                <div className="flex-1/2">
+                <div className="flex-1/2 p-1">
                     <div>
                         <Typography
                             marginTop={2}
@@ -17,30 +17,39 @@ const KeySpecs: React.FC = () => {
                             Key Specs
                         </Typography>
                     </div>
-                    <div className="flex">
-                        <div className="flex-1/2">
-                            <ul className="border-1">
-                                <li className="border-b-1">Engine Capacity</li>
-                                <li className="border-b-1">Mileage - ARAI</li>
-                                <li className="border-b-1">Fuel Tank Capacity</li>
-                                <li className="border-b-1">Kerb Weight</li>
-                                <li className="border-b-1">Power</li>
-                                <li className="border-b-1">Torque</li>
-                            </ul>
-                        </div>
-                        <div className="flex-1/2">
-                            <ul className="font-bold border-1">
-                                <li className="border-b-1">450 cc</li>
-                                <li className="border-b-1">25 kmpl</li>
-                                <li className="border-b-1">17.5 litres</li>
-                                <li className="border-b-1">220 kg</li>
-                                <li className="border-b-1">40 ps</li>
-                                <li className="border-b-1">40 nm</li>
-                            </ul>
-                        </div>
+                    <div className="flex mt-2">
+                        <table className="border-1 w-full bg-gray-50 text-base">
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Engine Capacity</td>
+                                <td className="border-b-1 p-2 font-bold">450 cc</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Mileage - ARAI</td>
+                                <td className="border-b-1 p-2 font-bold">25 kmpml</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Fuel Tank Capacity</td>
+                                <td className="border-b-1 p-2 font-bold">17.5 litres</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Kerb Weight</td>
+                                <td className="border-b-1 p-2 font-bold">220 kg</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Power</td>
+                                <td className="border-b-1 p-2 font-bold">40 ps</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Torque</td>
+                                <td className="border-b-1 p-2 font-bold">40 nm</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <a href="#" className="text-blue-800 font-semibold p-1">view more</a>
                     </div>
                 </div>
-                <div className="flex-1/2">
+                <div className="flex-1/2 p-1">
                     <div className="lg:flex-1/2">
                         <Typography
                             marginTop={2}
@@ -50,27 +59,36 @@ const KeySpecs: React.FC = () => {
                             Key Features
                         </Typography>
                     </div>
-                    <div className="flex">
-                        <div className="flex-1/2 border-1">
-                            <ul>
-                                <li className="border-b-1">Instrument Console</li>
-                                <li className="border-b-1">GPS & Navigation</li>
-                                <li className="border-b-1">Speedometer</li>
-                                <li className="border-b-1">Odometer</li>
-                                <li className="border-b-1">Fuel Guage</li>
-                                <li className="border-b-1">Gear Indicator</li>
-                            </ul>
-                        </div>
-                        <div className="flex-1/2 border-1">
-                            <ul className="font-bold">
-                                <li className="border-b-1">Digital</li>
-                                <li className="border-b-1">Yes</li>
-                                <li className="border-b-1">Digital</li>
-                                <li className="border-b-1">Digital</li>
-                                <li className="border-b-1">Yes</li>
-                                <li className="border-b-1">Yes</li>
-                            </ul>
-                        </div>
+                    <div className="flex mt-2">
+                        <table className="border-1 w-full bg-gray-50 text-base">
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Instrument Console</td>
+                                <td className="border-b-1 p-2 font-bold">Digital</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">GPS & Navigation</td>
+                                <td className="border-b-1 p-2 font-bold">Yes</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Speedometer</td>
+                                <td className="border-b-1 p-2 font-bold">Digital</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Odometer</td>
+                                <td className="border-b-1 p-2 font-bold">Digital</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Fuel Guage</td>
+                                <td className="border-b-1 p-2 font-bold">Yes</td>
+                            </tr>
+                            <tr>
+                                <td className="border-b-1 p-2 font-semibold">Gear Indicator</td>
+                                <td className="border-b-1 p-2 font-bold">Yes</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <a href="#" className="text-blue-800 font-semibold p-1">view more</a>
                     </div>
                 </div>
             </div>
