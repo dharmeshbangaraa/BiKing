@@ -18,7 +18,7 @@ const BikeDetails: React.FC = () => {
             </div>
             <div className="md:flex">
                 <div className="flex-1/2">
-                    <img className="w-fit h-fit mr-auto" src="/images/bikes/himalayan.jpg" alt="Royal Enfield Himlayan 450" height={350} width={350} />
+                    <img className="w-fit h-fit mr-auto" src="/images/bikes/himalayan.jpg" alt="royal-enfield-himalayan-450" height={350} width={350} />
                 </div>
                 <div className="flex-1/2">
                     <Typography
