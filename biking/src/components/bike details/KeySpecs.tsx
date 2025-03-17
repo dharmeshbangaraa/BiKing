@@ -64,27 +64,27 @@ const KeySpecs: React.FC = () => {
                     <div className="flex mt-2">
                         <table className="border-1 w-full bg-gray-50 text-base">
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Instrument Console</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Instrument Console</th>
                                 <td className="border-b-1 p-2 font-bold">Digital</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">GPS & Navigation</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">GPS & Navigation</th>
                                 <td className="border-b-1 p-2 font-bold">Yes</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Speedometer</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Speedometer</th>
                                 <td className="border-b-1 p-2 font-bold">Digital</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Odometer</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Odometer</th>
                                 <td className="border-b-1 p-2 font-bold">Digital</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Fuel Guage</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Fuel Guage</th>
                                 <td className="border-b-1 p-2 font-bold">Yes</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Gear Indicator</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Gear Indicator</th>
                                 <td className="border-b-1 p-2 font-bold">Yes</td>
                             </tr>
                         </table>
