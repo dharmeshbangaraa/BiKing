@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Button } from "@mui/material";
+import KeySpecs from "./KeySpecs"
 
 const BikeDetails: React.FC = () => {
 
@@ -27,14 +28,14 @@ const BikeDetails: React.FC = () => {
                         Royal Enfield Himalayan 450 On Road Price in Mumbai
                     </Typography>
                     <div className="flex mt-2">
-                        <div className="flex-1/2">
+                        <div className="flex-1/2 bg-gray-50">
                             <p>Ex-Showroom</p>
                             <p>RTO</p>
                             <p>Insurance</p>
                             <p>RSA + Extended Warranty</p>
                             <p>Others</p>
                         </div>
-                        <div className="text-end">
+                        <div className="text-end bg-gray-50">
                             <p>₹ 9,00,000</p>
                             <p>₹ 9,000</p>
                             <p>₹ 5,000</p>
@@ -47,7 +48,7 @@ const BikeDetails: React.FC = () => {
                         <div className="flex-1/2 mt-2">
                             <p className="font-bold">On Road Price in Mumbai</p>
                         </div>
-                        <div>
+                        <div className="mt-2">
                             <p className="font-bold">₹ 9,00,000</p>
                         </div>
                     </div>
@@ -64,6 +65,9 @@ const BikeDetails: React.FC = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                <KeySpecs />
             </div>
         </div>
     );
