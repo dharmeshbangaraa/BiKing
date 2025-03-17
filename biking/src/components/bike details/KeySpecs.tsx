@@ -13,6 +13,7 @@ const KeySpecs: React.FC = () => {
                             marginTop={2}
                             fontSize={20}
                             fontWeight={"bold"}
+                            data-testid="key-specs"
                         >
                             Key Specs
                         </Typography>
@@ -55,6 +56,7 @@ const KeySpecs: React.FC = () => {
                             marginTop={2}
                             fontSize={20}
                             fontWeight={"bold"}
+                            data-testid="key-features"
                         >
                             Key Features
                         </Typography>
