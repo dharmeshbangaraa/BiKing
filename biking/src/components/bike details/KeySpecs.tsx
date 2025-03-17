@@ -21,27 +21,27 @@ const KeySpecs: React.FC = () => {
                     <div className="flex mt-2">
                         <table className="border-1 w-full bg-gray-50 text-base">
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Engine Capacity</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Engine Capacity</th>
                                 <td className="border-b-1 p-2 font-bold">450 cc</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Mileage - ARAI</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Mileage - ARAI</th>
                                 <td className="border-b-1 p-2 font-bold">25 kmpml</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Fuel Tank Capacity</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Fuel Tank Capacity</th>
                                 <td className="border-b-1 p-2 font-bold">17.5 litres</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Kerb Weight</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Kerb Weight</th>
                                 <td className="border-b-1 p-2 font-bold">220 kg</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Power</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Power</th>
                                 <td className="border-b-1 p-2 font-bold">40 ps</td>
                             </tr>
                             <tr>
-                                <td className="border-b-1 p-2 font-semibold">Torque</td>
+                                <th className="border-b-1 p-2 font-semibold text-left">Torque</th>
                                 <td className="border-b-1 p-2 font-bold">40 nm</td>
                             </tr>
                         </table>

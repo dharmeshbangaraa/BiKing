@@ -737,10 +737,11 @@ LH:91
 BRDA:9,0,0,2
 BRDA:70,1,0,0
 BRDA:58,2,0,2
-BRDA:70,3,0,12
-BRDA:89,4,0,6
-BRF:5
-BRH:4
+BRDA:62,3,0,1
+BRDA:70,4,0,12
+BRDA:89,5,0,6
+BRF:6
+BRH:5
 end_of_record
 TN:
 SF:src/components/footer/Footer.tsx
