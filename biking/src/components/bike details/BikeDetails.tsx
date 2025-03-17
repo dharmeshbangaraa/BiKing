@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, Button } from "@mui/material";
 import KeySpecs from "./KeySpecs"
+import MileageBanner from "../banners/MileageBanner";
 
 const BikeDetails: React.FC = () => {
 
@@ -15,7 +16,7 @@ const BikeDetails: React.FC = () => {
                     Royal Enfield Himalayan 450
                 </Typography>
             </div>
-            <div className="lg:flex">
+            <div className="md:flex">
                 <div className="flex-1/2">
                     <img className="w-fit h-fit mr-auto" src="/images/bikes/himalayan.jpg" alt="Royal Enfield Himlayan 450" height={350} width={350} />
                 </div>
@@ -68,6 +69,9 @@ const BikeDetails: React.FC = () => {
             </div>
             <div>
                 <KeySpecs />
+            </div>
+            <div>
+                <MileageBanner />
             </div>
         </div>
     );
