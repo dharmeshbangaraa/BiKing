@@ -8,8 +8,9 @@ describe("test should render Bike Details component successfully", () => {
         
         render(<BikeDetails />)
 
-        expect(screen.getByRole('img')).toBeInTheDocument();
-        expect(screen.getAllByRole('button').length).toEqual(2);
+        expect(screen.getByAltText('royal-enfield-himalayan-450')).toBeInTheDocument();
+        expect(screen.getByAltText('petrol-pump-logo')).toBeInTheDocument();
+        expect(screen.getAllByRole('button').length).toEqual(3);
 
     })
 })

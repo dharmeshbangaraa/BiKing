@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/homepage/Homepage.tsx</title>
+    <title>Code coverage report for src/components/banners/MileageBanner.tsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/homepage</a> Homepage.tsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/banners</a> MileageBanner.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>18/18</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -99,76 +99,76 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import FeaturedBike from "../featured bikes/FeaturedBikes";
-import BrowseBy from "../browse by/BrowseBy";
-import Carousel from "../carousel/HomepageCarousel";
-import Searchbar from "../searchbar/Searchbar";
-import Scooters from "../popular scooters/PopularScooters";
-import GoGreen from "../banners/GoGreen";
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { Typography, Button } from "@mui/material";
+import React from "react";
 &nbsp;
-const HomePage: React.FC = () =&gt; {
+const MileageBanner: React.FC = () =&gt; {
 &nbsp;
-  return (
-    &lt;div data-testid="homepage"&gt;
+    return (
 &nbsp;
-      {/* Homepage Carousel */}
-      &lt;Carousel /&gt;
+        &lt;div className="my-5"&gt;
+            &lt;div className="border-2 border-blue-600 bg-blue-100 md:flex flex-row"&gt;
+                &lt;div className="md:flex-1/3 "&gt;
+                    &lt;img src="/images/banner-logos/petrol-pump.jpg" alt="petrol-pump-logo" className="h-45 md:h-35 w-full object-full" /&gt;
+                &lt;/div&gt;
+                &lt;div className="flex-2/3 text-center p-2"&gt;
+                    &lt;Typography
+                        fontWeight={"bold"}
+                        variant={"inherit"}
+                    &gt; Royal Enfield Himalayan 450 Mileage
+                    &lt;/Typography&gt;
+                    &lt;Typography
+                        marginTop={1}
+                        fontSize={14}
+                        variant={"body1"}
+                        textAlign={"left"}
+                    &gt; The ARAI mileage of Royal Enfield Himalayan 450 is &lt;b&gt;30 kmpl&lt;/b&gt;. Note: The average mileage may vary from the claimed mileage.
+                    &lt;/Typography&gt;
+                    &lt;Button variant="text" color="primary" sx={{ border: 1, backgroundColor: "white", marginY: 1 }}&gt;
+                        Mileage Calculator
+                    &lt;/Button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
 &nbsp;
-      {/* Homepage Searchbar */}
-      &lt;Searchbar /&gt;
-&nbsp;
-      {/* Featured Bikes */}
-      &lt;FeaturedBike /&gt;
-&nbsp;
-      {/* Browse by */}
-      &lt;BrowseBy /&gt;
-&nbsp;
-      {/* Go Green Banner */}
-      &lt;GoGreen /&gt;
-&nbsp;
-      {/* Popular Scooters */}
-      &lt;Scooters /&gt;
-&nbsp;
-    &lt;/div&gt;
-  );
+    );
 };
 &nbsp;
-export default HomePage;
-&nbsp;</pre></td></tr></table></pre>
+export default MileageBanner;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
