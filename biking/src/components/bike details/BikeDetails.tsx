@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Button } from "@mui/material";
 import KeySpecs from "./KeySpecs"
 import MileageBanner from "../banners/MileageBanner";
+import UserReviewSummary from "./UserReviewSummary";
 
 const BikeDetails: React.FC = () => {
 
@@ -72,6 +73,9 @@ const BikeDetails: React.FC = () => {
             </div>
             <div>
                 <MileageBanner />
+            </div>
+            <div>
+                <UserReviewSummary />
             </div>
         </div>
     );

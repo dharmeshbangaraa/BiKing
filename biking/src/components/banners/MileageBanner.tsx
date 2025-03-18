@@ -5,7 +5,7 @@ const MileageBanner: React.FC = () => {
 
     return (
 
-        <div className="my-5">
+        <div className="mt-5 p-1">
             <div className="border-2 border-blue-600 bg-blue-100 md:flex flex-row">
                 <div className="md:flex-1/3 ">
                     <img src="/images/banner-logos/petrol-pump.jpg" alt="petrol-pump-logo" className="h-45 md:h-35 w-full object-full" />
