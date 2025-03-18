@@ -14,7 +14,7 @@ const UserReviewSummary: React.FC = () => {
                     marginTop={2}
                     fontSize={20}
                     fontWeight={"bold"}
-                    data-testid="key-features"
+                    data-testid="user-review-summary-heading"
                 > Royal Enfield Himalayan 450 User Review Summary
                 </Typography>
             </div>
