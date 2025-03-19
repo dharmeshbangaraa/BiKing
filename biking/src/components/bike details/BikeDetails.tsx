@@ -3,6 +3,8 @@ import { Typography, Button } from "@mui/material";
 import KeySpecs from "./KeySpecs"
 import MileageBanner from "../banners/MileageBanner";
 import UserReviewSummary from "./UserReviewSummary";
+import SimilarBikes from "./SimilarBikes";
+import UserReview from "./UserReview";
 
 const BikeDetails: React.FC = () => {
 
@@ -76,6 +78,12 @@ const BikeDetails: React.FC = () => {
             </div>
             <div>
                 <UserReviewSummary />
+            </div>
+            <div>
+                <SimilarBikes />
+            </div>
+            <div>
+                <UserReview />
             </div>
         </div>
     );

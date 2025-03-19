@@ -54,7 +54,7 @@ const UserReviewSummary: React.FC = () => {
                             }}
                         >
                             <div className="text-center flex justify-center lg:p-4">
-                                <CircularRatingBar />
+                                <CircularRatingBar size={"lg"} value={75} />
                             </div>
                             <div className="text-center p-1">
                                 <h3 className="font-semibold">{param}</h3>
