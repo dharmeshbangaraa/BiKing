@@ -1,17 +1,23 @@
 import React from 'react';
 import CircularProgress from '@mui/joy/CircularProgress';
 
-const CircularRatingBar: React.FC = () => {
+
+interface CircularRatingBarProp {
+    size: "sm" | "lg" | "md",
+    value: number
+}
+
+const CircularRatingBar: React.FC<CircularRatingBarProp> = ({ size, value }) => {
     return (
         <div>
             <CircularProgress
-                size="lg"
+                size={size}
                 determinate
-                value={75}
+                value={value}
                 variant={"soft"}
                 sx={{
                     "@media (max-width: 600px)": {
-                       marginTop: 2
+                        marginTop: 2
                     }
                 }
                 }
