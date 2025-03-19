@@ -10,7 +10,7 @@ describe("test should render Bike Details component successfully", () => {
 
         expect(screen.getByAltText('royal-enfield-himalayan-450')).toBeInTheDocument();
         expect(screen.getByAltText('petrol-pump-logo')).toBeInTheDocument();
-        expect(screen.getAllByRole('button').length).toEqual(3);
+        expect(screen.getAllByRole('button').length).toEqual(6);
 
     })
 })
