@@ -1,11 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid2";
 import CircularRatingBar from "../utils/CircularRatingBar";
 
 const UserReview: React.FC = () => {
 
-    const reviews = [
+    const [reviews, setReviews] = useState([
         {
             userId: 1,
             name: "Dharmesh Bangara",
@@ -19,7 +19,8 @@ const UserReview: React.FC = () => {
             ComfortRating: 4,
             ServiceExperienceRating: 4,
             ValueforMoneyRating: 4,
-            PerformanceRating: 4
+            PerformanceRating: 4,
+            expanded: false
         },
         {
             userId: 2,
@@ -34,11 +35,21 @@ const UserReview: React.FC = () => {
             ComfortRating: 4,
             ServiceExperienceRating: 4,
             ValueforMoneyRating: 4,
-            PerformanceRating: 4
+            PerformanceRating: 4,
+            expanded: false
         }
-    ]
+    ]);
 
     const userReviewParams = ["Style & Design", "Reliability", "Comfort", "Service experience", "Value for money", "Performance"];
+
+    // Function to toggle expanded state for a specific review
+    const toggleExpand = (index: number) => {
+        setReviews((prevReviews) =>
+            prevReviews.map((review, i) =>
+                i === index ? { ...review, expanded: !review.expanded } : review
+            )
+        );
+    };
 
     return (
 
@@ -48,28 +59,29 @@ const UserReview: React.FC = () => {
                     marginTop={2}
                     fontSize={20}
                     fontWeight={"bold"}
-                    data-testid="user-review-summary-heading"
+                    data-testid="user-review-heading"
                 > Royal Enfield Himalayan 450 - User Reviews
                 </Typography>
             </div>
             <div className="mt-3">
-                {reviews.map((review) => (
+                {reviews.map((review, index) => (
                     <div className="bg-gray-50 p-2">
                         <Typography
                             fontSize={18}
                             fontWeight={"bold"}
-                            data-testid="user-review-summary-heading"
+                            data-testid="review-heading"
                         > {review.heading}
                         </Typography>
                         <p className="text-xs md:text-sm font-light">{review.when} &bull; {review.name} &bull; Got mileage of {review.mileageReceived} kmpl &bull; Ridden for {review.kmsRidden} km</p>
-                        <p className="pt-1 mt-1">{review.body}</p>
-                        <div>
+                        <div className={`transition-all duration-300 ${review.expanded ? "" : "line-clamp-2"
+                            }`}>
+                            <p className="pt-1 mt-1 text-sm">{review.body}</p>
                             <div>
                                 <Typography
                                     marginTop={2}
                                     fontSize={16}
                                     fontWeight={"bold"}
-                                    data-testid="user-review-heading"
+                                    data-testid="rating-heading"
                                 > Rating
                                 </Typography>
                             </div>
@@ -117,10 +129,9 @@ const UserReview: React.FC = () => {
                                 </Box>
                             </div>
                         </div>
+                        <a onClick={() => toggleExpand(index)} onKeyDown={() => { toggleExpand(index) }} className="text-blue-500 text-sm mt-1 hover:underline cursor-pointer">{review.expanded ? "show less" : "read more"}</a>
                         <hr className="mt-5" />
                     </div>
-
-
                 ))
                 }
             </div>
