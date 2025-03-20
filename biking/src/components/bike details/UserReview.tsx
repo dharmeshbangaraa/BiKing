@@ -59,7 +59,7 @@ const UserReview: React.FC = () => {
                     marginTop={2}
                     fontSize={20}
                     fontWeight={"bold"}
-                    data-testid="user-review-summary-heading"
+                    data-testid="user-review-heading"
                 > Royal Enfield Himalayan 450 - User Reviews
                 </Typography>
             </div>
@@ -69,7 +69,7 @@ const UserReview: React.FC = () => {
                         <Typography
                             fontSize={18}
                             fontWeight={"bold"}
-                            data-testid="user-review-summary-heading"
+                            data-testid="review-heading"
                         > {review.heading}
                         </Typography>
                         <p className="text-xs md:text-sm font-light">{review.when} &bull; {review.name} &bull; Got mileage of {review.mileageReceived} kmpl &bull; Ridden for {review.kmsRidden} km</p>
@@ -81,7 +81,7 @@ const UserReview: React.FC = () => {
                                     marginTop={2}
                                     fontSize={16}
                                     fontWeight={"bold"}
-                                    data-testid="user-review-heading"
+                                    data-testid="rating-heading"
                                 > Rating
                                 </Typography>
                             </div>
