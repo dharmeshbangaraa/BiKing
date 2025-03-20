@@ -129,7 +129,7 @@ const UserReview: React.FC = () => {
                                 </Box>
                             </div>
                         </div>
-                        <a onClick={() => toggleExpand(index)} onKeyDown={() => {toggleExpand(index)}} className="text-blue-500 text-sm mt-1 hover:underline cursor-pointer">{review.expanded ? "show less" : "read more"}</a>
+                        <a onClick={() => toggleExpand(index)} onKeyDown={() => { toggleExpand(index) }} className="text-blue-500 text-sm mt-1 hover:underline cursor-pointer">{review.expanded ? "show less" : "read more"}</a>
                         <hr className="mt-5" />
                     </div>
                 ))
