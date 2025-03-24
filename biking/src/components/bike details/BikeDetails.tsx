@@ -5,6 +5,7 @@ import MileageBanner from "../banners/MileageBanner";
 import UserReviewSummary from "./UserReviewSummary";
 import SimilarBikes from "./SimilarBikes";
 import UserReview from "./UserReview";
+import KeyFeatures from "./KeyFeatures";
 
 const BikeDetails: React.FC = () => {
 
@@ -70,8 +71,13 @@ const BikeDetails: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div>
-                <KeySpecs />
+            <div className="md:flex">
+                <div className="md:w-full">
+                    <KeySpecs />
+                </div>
+                <div className="md:w-full">
+                    <KeyFeatures />
+                </div>
             </div>
             <div>
                 <MileageBanner />
