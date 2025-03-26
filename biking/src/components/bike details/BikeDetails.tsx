@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Typography, Button } from "@mui/material";
 import KeySpecs from "./KeySpecs";
 import MileageBanner from "../banners/MileageBanner";
@@ -6,28 +6,47 @@ import UserReviewSummary from "./UserReviewSummary";
 import SimilarBikes from "./SimilarBikes";
 import UserReview from "./UserReview";
 import KeyFeatures from "./KeyFeatures";
+import { useParams } from "react-router-dom";
+import Bike from "../../interfaces/Bike";
 
 const BikeDetails: React.FC = () => {
+  const { name } = useParams();
+  console.log("bike name is: ", name);
+
+  const [bike, setBikes] = useState<Bike>();
+
+  useEffect(() => {
+    fetch(
+      `https://biking-production.up.railway.app/api/v1/bike/name?bikeName=${name}`
+    ) // Replace with real API
+      .then((res) => res.json())
+      .then((data) => {
+        setBikes(data);
+        console.log(data);
+      })
+      .catch((err) => console.error("Error fetching bike:", err));
+  }, []);
+
   return (
     <div className="lg:px-40 px-5">
       <div>
         <Typography marginTop={2} fontSize={24} fontWeight={"bold"}>
-          Royal Enfield Himalayan 450
+          {bike?.name}
         </Typography>
       </div>
       <div className="md:flex">
         <div className="flex-1/2">
           <img
             className="w-fit h-fit mr-auto"
-            src="https://imgd.aeplcdn.com/664x374/n/cw/ec/1/versions/royalenfield-hunter-350-retro-factory1727790756803.jpg?q=80"
-            alt="royal-enfield-himalayan-450"
+            src={bike?.image}
+            alt={bike?.name}
             height={350}
             width={350}
           />
         </div>
         <div className="flex-1/2">
           <Typography marginTop={2} fontSize={20} fontWeight={"bold"}>
-            Royal Enfield Himalayan 450 On Road Price in Mumbai
+            {bike?.name} On Road Price in Mumbai
           </Typography>
           <div className="flex mt-2">
             <div className="flex-1/2 bg-gray-50">
@@ -38,7 +57,7 @@ const BikeDetails: React.FC = () => {
               <p>Others</p>
             </div>
             <div className="text-end bg-gray-50">
-              <p>₹ 9,00,000</p>
+              <p>{bike?.exPrice}</p>
               <p>₹ 9,000</p>
               <p>₹ 5,000</p>
               <p>₹ 3,000</p>
@@ -51,7 +70,7 @@ const BikeDetails: React.FC = () => {
               <p className="font-bold">On Road Price in Mumbai</p>
             </div>
             <div className="mt-2">
-              <p className="font-bold">₹ 9,00,000</p>
+              <p className="font-bold">{bike?.onRoadPrice}</p>
             </div>
           </div>
           <div className="flex mt-1">
@@ -80,7 +99,16 @@ const BikeDetails: React.FC = () => {
       </div>
       <div className="md:flex">
         <div className="md:w-full">
-          <KeySpecs />
+          <KeySpecs
+            id={bike?.id}
+            name={bike?.name}
+            engineCapacity={bike?.engineCapacity}
+            mileageARAI={bike?.mileageARAI}
+            fuelTankCapacity={bike?.fuelTankCapacity}
+            kerbWeight={bike?.kerbWeight}
+            power={bike?.power}
+            torque={bike?.torque}
+          />
         </div>
         <div className="md:w-full">
           <KeyFeatures />
