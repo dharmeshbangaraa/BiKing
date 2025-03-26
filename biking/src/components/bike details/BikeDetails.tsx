@@ -16,7 +16,9 @@ const BikeDetails: React.FC = () => {
   const [bike, setBikes] = useState<Bike>();
 
   useEffect(() => {
-    fetch(`http://localhost:8081/api/v1/bike/name?bikeName=${name}`) // Replace with real API
+    fetch(
+      `https://biking-production.up.railway.app/api/v1/bike/name?bikeName=${name}`
+    ) // Replace with real API
       .then((res) => res.json())
       .then((data) => {
         setBikes(data);
