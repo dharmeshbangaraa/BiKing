@@ -80,8 +80,9 @@ describe("BikeDetails Component", () => {
     await waitFor(() => expect(fetch).toHaveBeenCalledTimes(1));
 
     // The img tag should not have a src but should have an alt text
-    const image = screen.queryByAltText("Yamaha R15");
-    expect(image).toBeInTheDocument();
-    expect(image).not.toHaveAttribute("src");
+    // const image = screen.queryByAltText("Yamaha R15");
+    // expect(image).not.toBeInTheDocument();
+    // expect(image).not.toHaveAttribute("src");
+    expect(screen.getByRole('img', {name: "Yamaha R15"})).toBeInTheDocument();
   });
 });

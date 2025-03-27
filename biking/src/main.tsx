@@ -15,6 +15,7 @@ const routes = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/checkout/:name", element: <BikeDetails /> },
       { path: "/brand/:brand", element: <BikeList /> },
+      { path: "/brand/:brand/checkout/:name", element: <BikeDetails />}
     ],
   },
 ]);

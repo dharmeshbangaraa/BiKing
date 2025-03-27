@@ -65,7 +65,7 @@ const BikeList: React.FC = () => {
                 <CardContent className="bg-gray-50">
                   <h2 className="text-md font-semibold">{bike.name}</h2>
                   <p className="text-bold text-black text-sm mb-2">
-                    999.9 cc &bull; 30 kmpl &bull; 40 bhp &bull; 220 kg
+                    {bike.engineCapacity} &bull; {bike.mileageARAI} &bull; {bike.power} &bull; {bike.kerbWeight}
                   </p>
                   <p className="text-md font-semibold flex">
                     ₹ {bike.onRoadPrice} <span className="pl-1">Onwards</span>
