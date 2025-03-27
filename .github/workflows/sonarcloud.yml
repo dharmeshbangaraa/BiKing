@@ -39,7 +39,7 @@ jobs:
           args: >
             -Dsonar.projectKey=dharmeshbangaraa_BiKing
             -Dsonar.organization=biking
-            -Dsonar.sources=src  # Explicitly defining source directory
+            -Dsonar.sources=src/components  # Explicitly defining source directory
             -Dsonar.verbose=true  # Enable detailed logs for debugging
             -Dsonar.tests=src/tests,src/tests/components/**/*.test.tsx, src/tests/components/*.test.tsx
             -Dsonar.exclusions=**/*.test.ts,**/*.test.tsx,**/__mocks__/**,**/__tests__/**
