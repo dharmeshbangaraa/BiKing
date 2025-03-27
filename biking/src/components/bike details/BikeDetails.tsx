@@ -124,7 +124,11 @@ const BikeDetails: React.FC = () => {
         </div>
       </div>
       <div>
-        <MileageBanner />
+        <MileageBanner
+          id={bike?.id}
+          name={bike?.name}
+          mileageARAI={bike?.mileageARAI}
+        />
       </div>
       <div>
         <UserReviewSummary />
