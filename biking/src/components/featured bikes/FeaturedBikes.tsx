@@ -4,7 +4,7 @@ import Bike from "../../interfaces/Bike";
 import TabsComponent from "../utils/Tabs";
 import { useNavigate } from "react-router-dom";
 
-const categories = ["Sport", "Cruiser", "Electric", "Adventure"];
+const categories = ["sport", "cruiser", "electric", "adventure"];
 
 const FeaturedBike: React.FC = () => {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ const FeaturedBike: React.FC = () => {
   const [bikes, setBikes] = useState<Bike[]>([]);
 
   const [selectedCategory, setSelectedCategory] = useState<string | null>(
-    "Sport"
+    "sport"
   );
 
   useEffect(() => {
