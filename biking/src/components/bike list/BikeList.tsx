@@ -44,43 +44,45 @@ const BikeList: React.FC = () => {
           </Typography>
         </div>
         <div>
-          {bikes?.map((bike) => (
-            <Card
-              key={bike.id}
-              className="hover:shadow-lg md:flex md:flex-1/2 md:mr-10 md:justify-evenly justify-center"
-              sx={{
-                borderRadius: 5,
-                borderWidth: 1,
-                marginY: 3,
-                borderColor: "gray",
-              }}
-            >
-              <img
-                src={bike.image}
-                alt={bike.name}
-                className="w-fit h-[200px] object-fit rounded"
-              />
-              <CardContent className="bg-gray-50">
-                <h2 className="text-md font-semibold">{bike.name}</h2>
-                <p className="text-bold text-black text-sm mb-2">
-                  999.9 cc &bull; 30 kmpl &bull; 40 bhp &bull; 220 kg
-                </p>
-                <p className="text-md font-semibold flex">
-                  ₹ {bike.onRoadPrice} <span className="pl-1">Onwards</span>
-                </p>
-                <span className="text-sm mb-2">On-Road Price in Mumbai</span>
-                <Button
-                  variant="text"
-                  color="primary"
-                  fullWidth
-                  sx={{ border: 1, marginTop: 2, borderRadius: 2 }}
-                  onClick={() => navigate(`checkout/${bike.name}`)}
-                >
-                  check out
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+          {bikes
+            ?.filter((bike) => bike.brand === brand)
+            .map((bike) => (
+              <Card
+                key={bike.id}
+                className="hover:shadow-lg md:flex md:flex-1/2 md:mr-10 md:justify-evenly justify-center"
+                sx={{
+                  borderRadius: 5,
+                  borderWidth: 1,
+                  marginY: 3,
+                  borderColor: "gray",
+                }}
+              >
+                <img
+                  src={bike.image}
+                  alt={bike.name}
+                  className="w-fit h-[200px] object-fit rounded"
+                />
+                <CardContent className="bg-gray-50">
+                  <h2 className="text-md font-semibold">{bike.name}</h2>
+                  <p className="text-bold text-black text-sm mb-2">
+                    999.9 cc &bull; 30 kmpl &bull; 40 bhp &bull; 220 kg
+                  </p>
+                  <p className="text-md font-semibold flex">
+                    ₹ {bike.onRoadPrice} <span className="pl-1">Onwards</span>
+                  </p>
+                  <span className="text-sm mb-2">On-Road Price in Mumbai</span>
+                  <Button
+                    variant="text"
+                    color="primary"
+                    fullWidth
+                    sx={{ border: 1, marginTop: 2, borderRadius: 2 }}
+                    onClick={() => navigate(`checkout/${bike.name}`)}
+                  >
+                    check out
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
         </div>
       </div>
     </div>
