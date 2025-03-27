@@ -1,6 +1,14 @@
 import { Typography } from "@mui/material";
+import BikeKeyFeatures from "../../interfaces/BikeKeyFeatures";
 
-const KeyFeatures: React.FC = () => {
+const KeyFeatures: React.FC<BikeKeyFeatures> = ({
+  instrumentConsole,
+  gps,
+  speedometer,
+  odometer,
+  fuelGauge,
+  gearIndicator,
+}) => {
   return (
     <div className="md:ml-2">
       <div>
@@ -21,7 +29,7 @@ const KeyFeatures: React.FC = () => {
                 Instrument Console
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left w-1/3">
-                Digital
+                {instrumentConsole}
               </td>
             </tr>
             <tr>
@@ -29,7 +37,7 @@ const KeyFeatures: React.FC = () => {
                 GPS & Navigation
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left">
-                Yes
+                {gps}
               </td>
             </tr>
             <tr>
@@ -37,7 +45,7 @@ const KeyFeatures: React.FC = () => {
                 Speedometer
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left">
-                Digital
+                {speedometer}
               </td>
             </tr>
             <tr>
@@ -45,7 +53,7 @@ const KeyFeatures: React.FC = () => {
                 Odometer
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left">
-                Digital
+                {odometer}
               </td>
             </tr>
             <tr>
@@ -53,7 +61,7 @@ const KeyFeatures: React.FC = () => {
                 Fuel Gauge
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left">
-                Yes
+                {fuelGauge}
               </td>
             </tr>
             <tr>
@@ -61,7 +69,7 @@ const KeyFeatures: React.FC = () => {
                 Gear Indicator
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left">
-                Yes
+                {gearIndicator}
               </td>
             </tr>
           </tbody>

@@ -10,7 +10,7 @@ const KeySpecs: React.FC<BikeKeySpecs> = ({
   torque,
 }) => {
   return (
-    <div className="md:mr-2">
+    <div className="md:mr-2 ml-1">
       <div>
         <Typography
           marginTop={2}
@@ -25,7 +25,7 @@ const KeySpecs: React.FC<BikeKeySpecs> = ({
         <table className="border-1 w-[500px] bg-gray-50 text-base table-fixed">
           <tbody>
             <tr>
-              <th className="border border-gray-300 p-2 font-semibold text-left w-2/3">
+              <th className="border border-gray-300 p-2 font-semibold text-left w-1/2">
                 Engine Capacity
               </th>
               <td className="border border-gray-300 p-2 font-bold text-left w-1/3">
