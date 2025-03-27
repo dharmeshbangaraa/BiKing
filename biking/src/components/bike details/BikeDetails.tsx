@@ -70,7 +70,7 @@ const BikeDetails: React.FC = () => {
               <p className="font-bold">On Road Price in Mumbai</p>
             </div>
             <div className="mt-2">
-              <p className="font-bold">{bike?.onRoadPrice}</p>
+              <p className="font-bold">₹ {bike?.onRoadPrice}</p>
             </div>
           </div>
           <div className="flex mt-1">
@@ -111,7 +111,16 @@ const BikeDetails: React.FC = () => {
           />
         </div>
         <div className="md:w-full">
-          <KeyFeatures />
+          <KeyFeatures
+            id={bike?.id}
+            name={bike?.name}
+            instrumentConsole={bike?.instrumentConsole}
+            gps={bike?.gps}
+            speedometer={bike?.speedometer}
+            odometer={bike?.odometer}
+            fuelGauge={bike?.fuelGauge}
+            gearIndicator={bike?.gearIndicator}
+          />
         </div>
       </div>
       <div>

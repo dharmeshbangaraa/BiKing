@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.54% </span>
+                <span class="strong">9.09% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/53</span>
+                <span class='fraction'>4/44</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.54% </span>
+                <span class="strong">9.09% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/53</span>
+                <span class='fraction'>4/44</span>
             </div>
         
             
@@ -115,19 +115,12 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a>
-<a name='L57'></a><a href='#L57'>57</a>
-<a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a>
-<a name='L61'></a><a href='#L61'>61</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -135,13 +128,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -154,10 +141,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -183,33 +166,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { Button, Card, CardContent } from "@mui/material";
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Button, Card, CardContent } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Bike from "../../interfaces/Bike";
 &nbsp;
 const BikesUnder50k: React.FC = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  const [bikes, setBikes] = useState&lt;Bike[]&gt;([{</span>
-<span class="cstat-no" title="statement not covered" >    id: 1,</span>
-<span class="cstat-no" title="statement not covered" >    name: "Royal Enfield Himalayan",</span>
-<span class="cstat-no" title="statement not covered" >    price: "3,00,000",</span>
-<span class="cstat-no" title="statement not covered" >    category: "Adventure",</span>
-<span class="cstat-no" title="statement not covered" >    image: "/images/bikes/himalayan.jpg"</span>
-<span class="cstat-no" title="statement not covered" >  },</span>
-<span class="cstat-no" title="statement not covered" >  {</span>
-<span class="cstat-no" title="statement not covered" >    id: 2,</span>
-<span class="cstat-no" title="statement not covered" >    name: "Kawasaki Ninja 300",</span>
-<span class="cstat-no" title="statement not covered" >    price: "3,40,000",</span>
-<span class="cstat-no" title="statement not covered" >    category: "Sport",</span>
-<span class="cstat-no" title="statement not covered" >    image: "/images/bikes/Ninja300.jpg"</span>
-<span class="cstat-no" title="statement not covered" >  },</span>
-<span class="cstat-no" title="statement not covered" >  {</span>
-<span class="cstat-no" title="statement not covered" >    id: 3,</span>
-<span class="cstat-no" title="statement not covered" >    name: "KTM RC 390",</span>
-<span class="cstat-no" title="statement not covered" >    price: "3,40,000",</span>
-<span class="cstat-no" title="statement not covered" >    category: "Sport",</span>
-<span class="cstat-no" title="statement not covered" >    image: "/images/bikes/RC390.jpg"</span>
-<span class="cstat-no" title="statement not covered" >  }]);</span>
+<span class="cstat-no" title="statement not covered" >  const [bikes, setBikes] = useState&lt;Bike[]&gt;([]);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    fetch("https://api.example.com/bikes") // Replace with real API</span>
@@ -222,7 +185,11 @@ const BikesUnder50k: React.FC = <span class="fstat-no" title="function not cover
 <span class="cstat-no" title="statement not covered" >    &lt;div&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;div className="grid grid-cols-1 md:grid-cols-3 gap-4"&gt;</span>
 <span class="cstat-no" title="statement not covered" >        {bikes?.map((filteredBike) =&gt; (</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Card key={filteredBike.id} className="hover:shadow-lg" sx={{ borderRadius: 5, borderWidth: 1, borderColor: "gray" }}&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;Card</span>
+<span class="cstat-no" title="statement not covered" >            key={filteredBike.id}</span>
+<span class="cstat-no" title="statement not covered" >            className="hover:shadow-lg"</span>
+<span class="cstat-no" title="statement not covered" >            sx={{ borderRadius: 5, borderWidth: 1, borderColor: "gray" }}</span>
+          &gt;
 <span class="cstat-no" title="statement not covered" >            &lt;img</span>
 <span class="cstat-no" title="statement not covered" >              src={filteredBike.image}</span>
 <span class="cstat-no" title="statement not covered" >              alt={filteredBike.name}</span>
@@ -230,9 +197,17 @@ const BikesUnder50k: React.FC = <span class="fstat-no" title="function not cover
 <span class="cstat-no" title="statement not covered" >            /&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;CardContent className="bg-gray-50 p-4"&gt;</span>
 <span class="cstat-no" title="statement not covered" >              &lt;h3 className="text-md font-semibold"&gt;{filteredBike.name}&lt;/h3&gt;</span>
-<span class="cstat-no" title="statement not covered" >              &lt;p className="text-md font-semibold flex"&gt;&amp;#8377; {filteredBike.price} &lt;span className="pl-1"&gt;Onwards&lt;/span&gt;&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >              &lt;p className="text-md font-semibold flex"&gt;</span>
+<span class="cstat-no" title="statement not covered" >                &amp;#8377; {filteredBike.price}{" "}</span>
+<span class="cstat-no" title="statement not covered" >                &lt;span className="pl-1"&gt;Onwards&lt;/span&gt;</span>
+<span class="cstat-no" title="statement not covered" >              &lt;/p&gt;</span>
 <span class="cstat-no" title="statement not covered" >              &lt;span className="text-sm mb-2"&gt;Avg. Ex-Showroom price&lt;/span&gt;</span>
-<span class="cstat-no" title="statement not covered" >              &lt;Button variant="text" color="primary" fullWidth sx={{ border: 1, marginTop: 2, borderRadius: 2 }}&gt;</span>
+<span class="cstat-no" title="statement not covered" >              &lt;Button</span>
+<span class="cstat-no" title="statement not covered" >                variant="text"</span>
+<span class="cstat-no" title="statement not covered" >                color="primary"</span>
+<span class="cstat-no" title="statement not covered" >                fullWidth</span>
+<span class="cstat-no" title="statement not covered" >                sx={{ border: 1, marginTop: 2, borderRadius: 2 }}</span>
+<span class="cstat-no" title="statement not covered" >              &gt;</span>
                 check out
 <span class="cstat-no" title="statement not covered" >              &lt;/Button&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;/CardContent&gt;</span>
@@ -240,17 +215,18 @@ const BikesUnder50k: React.FC = <span class="fstat-no" title="function not cover
 <span class="cstat-no" title="statement not covered" >        ))}</span>
 <span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
-  )
-<span class="cstat-no" title="statement not covered" >}</span>
+  );
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;
-export default BikesUnder50k;</pre></td></tr></table></pre>
+export default BikesUnder50k;
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-03-20T16:04:29.702Z
+                at 2025-03-27T07:29:24.847Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
