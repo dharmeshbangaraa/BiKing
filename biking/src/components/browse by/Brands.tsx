@@ -99,6 +99,7 @@ const Brands: React.FC = () => {
                 alt={`${brand.name}` + ` logo`}
                 className="h-20 w-auto object-contain"
                 onClick={() => navigate(`brand/${brand.name}`)}
+                onKeyDown={() => {}}
               />
             </div>
             <div className="text-center">
