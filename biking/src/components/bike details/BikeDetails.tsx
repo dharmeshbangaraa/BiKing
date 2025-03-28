@@ -131,13 +131,13 @@ const BikeDetails: React.FC = () => {
         />
       </div>
       <div>
-        <UserReviewSummary />
+        <UserReviewSummary id={bike?.id} name={bike?.name} />
       </div>
       <div>
         <SimilarBikes />
       </div>
       <div>
-        <UserReview />
+        <UserReview id={bike?.id} name={bike?.name} />
       </div>
     </div>
   );

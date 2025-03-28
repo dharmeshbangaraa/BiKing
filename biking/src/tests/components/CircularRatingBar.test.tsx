@@ -3,10 +3,10 @@ import { describe, expect, it } from "vitest";
 import CircularRatingBar from "../../components/utils/CircularRatingBar";
 import "@testing-library/jest-dom";
 
-describe('test should render circular rating bar component successfully', () => {
-    it('test should render the circular rating icon successfully', () => {
-        render(<CircularRatingBar />)
+describe("test should render circular rating bar component successfully", () => {
+  it("test should render the circular rating icon successfully", () => {
+    render(<CircularRatingBar size={"sm"} value={0} />);
 
-        expect(screen.getByRole('progressbar')).toBeInTheDocument();
-    })
-})
+    expect(screen.getByRole("progressbar")).toBeInTheDocument();
+  });
+});
