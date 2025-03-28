@@ -1,9 +1,13 @@
-import { Button, Card, CardContent } from "@mui/material";
+import { Card, CardContent } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import IBike from "../../interfaces/Bike";
+import CheckoutButton from "../utils/CheckoutButton";
+import { useNavigate } from "react-router-dom";
 
 const Scooters: React.FC = () => {
   const [scooter, setScooter] = useState<IBike[]>([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("https://biking-production.up.railway.app/api/v1/bike/") // Replace with real API
@@ -36,14 +40,9 @@ const Scooters: React.FC = () => {
                 {filteredScooter.exPrice} <span className="pl-1">Onwards</span>
               </p>
               <span className="text-sm mb-2">Avg. Ex-Showroom price</span>
-              <Button
-                variant="text"
-                color="primary"
-                fullWidth
-                sx={{ border: 1, marginTop: 2, borderRadius: 2 }}
-              >
-                check out
-              </Button>
+              <CheckoutButton
+                onClick={() => navigate(`checkout/${filteredScooter.name}`)}
+              />
             </CardContent>
           </Card>
         ))}

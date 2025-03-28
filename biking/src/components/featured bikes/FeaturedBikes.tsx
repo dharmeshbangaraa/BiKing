@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardContent, Button, Typography } from "@mui/material";
+import { Card, CardContent, Typography } from "@mui/material";
 import Bike from "../../interfaces/Bike";
 import TabsComponent from "../utils/Tabs";
 import { useNavigate } from "react-router-dom";
+import CheckoutButton from "../utils/CheckoutButton";
 
 const categories = ["sport", "cruiser", "electric", "adventure"];
 
@@ -68,15 +69,9 @@ const FeaturedBike: React.FC = () => {
                   {filteredBike.exPrice} <span className="pl-1">Onwards</span>
                 </p>
                 <span className="text-sm mb-2">Avg. Ex-Showroom price</span>
-                <Button
-                  variant="text"
-                  color="primary"
-                  fullWidth
-                  sx={{ border: 1, marginTop: 2, borderRadius: 2 }}
+                <CheckoutButton
                   onClick={() => navigate(`checkout/${filteredBike.name}`)}
-                >
-                  check out
-                </Button>
+                />
               </CardContent>
             </Card>
           ))}
