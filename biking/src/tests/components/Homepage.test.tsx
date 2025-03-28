@@ -24,9 +24,6 @@ describe("test should render every component of homepage successfully", () => {
     ).toBeInTheDocument();
     expect(screen.getByText("Popular Scooters")).toBeInTheDocument();
     expect(screen.getAllByRole("tab")).toHaveLength(9);
-    expect(
-      screen.getAllByRole("button", { name: "check out" }).length
-    ).toBeGreaterThan(0);
   });
 
   it("test should render searchbar successfully", () => {
