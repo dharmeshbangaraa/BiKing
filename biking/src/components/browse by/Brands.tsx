@@ -93,7 +93,7 @@ const Brands: React.FC = () => {
               },
             }}
           >
-            <div className="text-center flex justify-center lg:p-4">
+            <div className="text-center flex justify-center lg:p-4 cursor-pointer">
               <img
                 src={brand.img}
                 alt={`${brand.name}` + ` logo`}

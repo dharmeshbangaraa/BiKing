@@ -4,26 +4,31 @@ import IBike from "../../interfaces/Bike";
 import CheckoutButton from "../utils/CheckoutButton";
 import { useNavigate } from "react-router-dom";
 
-const Scooters: React.FC = () => {
+interface scooterCategory {
+  selectedCategory: string | null;
+}
+
+const Scooters: React.FC<scooterCategory> = ({ selectedCategory }) => {
   const [scooter, setScooter] = useState<IBike[]>([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://biking-production.up.railway.app/api/v1/bike/") // Replace with real API
+    fetch("https://biking-production.up.railway.app/api/v1/bike/")
       .then((res) => res.json())
       .then((data) => setScooter(data))
       .catch((err) => console.error("Error fetching scooters:", err));
   }, []);
 
-  const filteredScooters = scooter
-    .filter((scooter) => scooter.category == "scooter")
-    .slice(0, 3);
+  const filteredScooters =
+    selectedCategory == "scooters"
+      ? scooter.filter((scooter) => scooter.category == "scooter")
+      : scooter.filter((scooter) => scooter.category == "scooter-ev");
 
   return (
     <div className="my-5">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {filteredScooters.map((filteredScooter) => (
+        {filteredScooters.splice(0, 3).map((filteredScooter) => (
           <Card
             key={filteredScooter.id}
             className="hover:shadow-lg"

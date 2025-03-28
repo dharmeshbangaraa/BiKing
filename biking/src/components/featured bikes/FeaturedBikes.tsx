@@ -5,7 +5,7 @@ import TabsComponent from "../utils/Tabs";
 import { useNavigate } from "react-router-dom";
 import CheckoutButton from "../utils/CheckoutButton";
 
-const categories = ["sport", "cruiser", "electric", "adventure"];
+const categories = ["sport", "cruiser", "scooter", "adventure"];
 
 const FeaturedBike: React.FC = () => {
   const navigate = useNavigate();

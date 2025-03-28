@@ -17,7 +17,7 @@ describe("test should render Featured Bikes component successfully", () => {
     expect(screen.getAllByRole("tab")).toHaveLength(4);
     expect(screen.getByRole("tab", { name: "sport" })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "cruiser" })).toBeInTheDocument();
-    expect(screen.getByRole("tab", { name: "electric" })).toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "scooter" })).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "adventure" })).toBeInTheDocument();
   });
 });
