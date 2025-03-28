@@ -27,6 +27,17 @@ const BikeDetails: React.FC = () => {
       .catch((err) => console.error("Error fetching bike:", err));
   }, []);
 
+  const calculatePercentage = () => {
+    if (!bike?.exPrice) return "0";
+    if (!bike.onRoadPrice) return "0";
+    const exPrice = parseInt(bike?.exPrice.replace(/[^0-9]/g, ""), 10) || 0;
+    const onRoad = Number(bike.onRoadPrice.replace(/,/g, ""));
+    const effectivePrice = onRoad - exPrice;
+    return effectivePrice;
+  };
+
+  var effectivePriceDiff = Number(calculatePercentage());
+
   return (
     <div className="lg:px-40 px-5">
       <div>
@@ -58,10 +69,18 @@ const BikeDetails: React.FC = () => {
             </div>
             <div className="text-end bg-gray-50">
               <p>{bike?.exPrice}</p>
-              <p>₹ 9,000</p>
-              <p>₹ 5,000</p>
-              <p>₹ 3,000</p>
-              <p>₹ 1,000</p>
+              <p>
+                ₹ {Math.round((effectivePriceDiff * 50) / 100).toLocaleString()}{" "}
+              </p>
+              <p>
+                ₹ {Math.round((effectivePriceDiff * 30) / 100).toLocaleString()}
+              </p>
+              <p>
+                ₹ {Math.round((effectivePriceDiff * 15) / 100).toLocaleString()}
+              </p>
+              <p>
+                ₹ {Math.round((effectivePriceDiff * 5) / 100).toLocaleString()}
+              </p>
             </div>
           </div>
           <hr className="mt-2" />
