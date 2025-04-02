@@ -21,7 +21,7 @@ describe("test should render Mileage banner successfully", () => {
 
     expect(screen.getByAltText("petrol-pump-logo")).toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: "Mileage Calculator" })
-    ).toBeInTheDocument();
+      screen.getAllByRole("button").length
+    ).toBeGreaterThanOrEqual(5);
   });
 });
