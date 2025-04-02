@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import IBikeMileage from "../../interfaces/BikeMileage";
 
 const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
-
   const [km, setKm] = useState(10);
 
   return (
@@ -31,7 +30,10 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
             The ARAI mileage of {name} is <b>{mileageARAI}</b>. Note: The
             average mileage may vary from the claimed mileage.
           </Typography>
-          <div className="md:flex md:flex-2/3 mt-3 justify-center">
+          <div className="md:text-left">
+            <span className="text-xs font-bold">Select kms ridden per day</span>
+          </div>
+          <div className="md:flex md:flex-4/5 mt-1 justify-center">
             <div>
               <Button
                 variant="text"
@@ -74,12 +76,18 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
                 50
               </Button>
             </div>
-            <div className="md:flex-1/4 mt-1">
-              <Typography
-                fontSize={18}
-                variant={"body1"}
-              >
-                ₹ {((km / Number(mileageARAI?.split(" ")[0]) * 103.5) * 30).toLocaleString()}* / month
+            <div className="md:flex-1/5">
+              <span className="text-xs">
+                * Petrol price considered ₹103.5/litre
+              </span>
+              <Typography fontSize={18} variant={"body1"}>
+                ₹{" "}
+                {(
+                  (km / Number(mileageARAI?.split(" ")[0])) *
+                  103.5 *
+                  30
+                ).toLocaleString()}
+                * / month
               </Typography>
             </div>
           </div>
