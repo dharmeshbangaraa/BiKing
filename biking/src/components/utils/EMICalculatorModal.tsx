@@ -79,7 +79,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       valueLabelDisplay="auto"
                       sx={{
                         "@media (max-width: 600px)": {
-                          width: "70%",
+                          width: "100%",
                         },
                       }}
                     />
@@ -89,7 +89,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       sx={{
                         width: 500,
                         "@media (max-width: 600px)": {
-                          width: "70%",
+                          width: "100%",
                         },
                       }}
                       onChange={(e) => setDownPayment(Number(e.target.value))}
@@ -112,7 +112,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       valueLabelDisplay="auto"
                       sx={{
                         "@media (max-width: 600px)": {
-                          width: "70%",
+                          width: "100%",
                         },
                       }}
                     />
@@ -122,7 +122,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       className="w-full"
                       sx={{
                         "@media (max-width: 600px)": {
-                          width: "70%",
+                          width: "100%",
                         },
                       }}
                     />
@@ -140,7 +140,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       valueLabelDisplay="auto"
                       sx={{
                         "@media (max-width: 600px)": {
-                          width: "70%",
+                          width: "100%",
                         },
                       }}
                     />
@@ -150,7 +150,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       className="w-full"
                       sx={{
                         "@media (max-width: 600px)": {
-                          width: "70%",
+                          width: "100%",
                         },
                       }}
                     />
