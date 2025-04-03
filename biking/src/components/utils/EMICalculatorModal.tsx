@@ -22,6 +22,9 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: 1000,
+    "@media (max-width: 600px)": {
+      width: 400,
+    },
     bgcolor: "background.paper",
     border: "2px solid #000",
     boxShadow: 24,
@@ -54,12 +57,12 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
         <Box sx={style}>
           <div>
             <div>
-              <Typography fontSize={20} fontWeight={"bold"}>
+              <Typography fontSize={18} fontWeight={"bold"}>
                 Calculate EMI for {bikeName}
               </Typography>
             </div>
-            <div className="flex">
-              <div className="flex-1/2">
+            <div className="md:flex">
+              <div className="md:flex-1/2">
                 <div>
                   <span className="text-sm">
                     Down Payment: ₹ {downPayment.toLocaleString()}
@@ -69,29 +72,37 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       value={downPayment}
                       min={0}
                       max={onRoadPrice}
-                      step={1}
+                      step={100}
                       onChange={(_e, newValue) =>
                         setDownPayment(newValue as number)
                       }
                       valueLabelDisplay="auto"
+                      sx={{
+                        "@media (max-width: 600px)": {
+                          width: "70%",
+                        },
+                      }}
                     />
                     <TextField
                       value={downPayment.toLocaleString()}
                       className="border-0"
                       sx={{
                         width: 500,
+                        "@media (max-width: 600px)": {
+                          width: "70%",
+                        },
                       }}
                       onChange={(e) => setDownPayment(Number(e.target.value))}
                     />
-                    <span className="text-sm">
+                    <p className="text-sm">
                       Your loan amount will be: ₹{" "}
                       {(onRoadPrice - downPayment).toLocaleString()}
-                    </span>
+                    </p>
                   </div>
                 </div>
-                <div className="flex mt-2">
-                  <div className="flex-1/2 pr-3">
-                    <span className="text-sm">Tenure (Years)</span>
+                <div className="md:flex mt-2">
+                  <div className="md:flex-1/2 md:pr-3">
+                    <p className="text-sm">Tenure (Years)</p>
                     <Slider
                       value={tenure}
                       min={1}
@@ -99,15 +110,25 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       step={1}
                       onChange={(_e, newValue) => setTenure(newValue as number)}
                       valueLabelDisplay="auto"
+                      sx={{
+                        "@media (max-width: 600px)": {
+                          width: "70%",
+                        },
+                      }}
                     />
                     <TextField
                       value={tenure}
                       onChange={(e) => setTenure(Number(e.target.value))}
                       className="w-full"
+                      sx={{
+                        "@media (max-width: 600px)": {
+                          width: "70%",
+                        },
+                      }}
                     />
                   </div>
-                  <div className="flex-1/2 pl-3">
-                    <span className="text-sm">Interest (%)</span>
+                  <div className="md:flex-1/2 md:pl-3">
+                    <p className="text-sm">Interest (%)</p>
                     <Slider
                       value={interestRate}
                       min={5}
@@ -117,16 +138,26 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                         setInterestRate(newValue as number)
                       }
                       valueLabelDisplay="auto"
+                      sx={{
+                        "@media (max-width: 600px)": {
+                          width: "70%",
+                        },
+                      }}
                     />
                     <TextField
                       value={interestRate}
                       onChange={(e) => setInterestRate(Number(e.target.value))}
                       className="w-full"
+                      sx={{
+                        "@media (max-width: 600px)": {
+                          width: "70%",
+                        },
+                      }}
                     />
                   </div>
                 </div>
               </div>
-              <div className="flex-1/2 ml-2 border-l border-gray-400"></div>
+              <div className="md:flex-1/2"></div>
             </div>
           </div>
         </Box>
