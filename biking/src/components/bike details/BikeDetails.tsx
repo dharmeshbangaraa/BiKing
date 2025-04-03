@@ -8,12 +8,14 @@ import UserReview from "./UserReview";
 import KeyFeatures from "./KeyFeatures";
 import { useParams } from "react-router-dom";
 import Bike from "../../interfaces/Bike";
+import EMIModal from "../utils/EMICalculatorModal";
 
 const BikeDetails: React.FC = () => {
   const { name } = useParams();
   console.log("bike name is: ", name);
 
   const [bike, setBikes] = useState<Bike>();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -108,10 +110,19 @@ const BikeDetails: React.FC = () => {
                 variant="text"
                 color="primary"
                 fullWidth
+                onClick={() => setOpen(true)}
                 sx={{ border: 1, marginY: 1, borderRadius: 2 }}
               >
                 EMI Calculator
               </Button>
+
+              {open && (
+                <EMIModal
+                  onClose={() => setOpen(false)}
+                  onRoad={bike?.onRoadPrice}
+                  bikeName={bike?.name}
+                />
+              )}
             </div>
           </div>
         </div>
