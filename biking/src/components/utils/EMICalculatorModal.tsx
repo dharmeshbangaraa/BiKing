@@ -8,6 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import PieChart from "./PieChart";
 
 interface ModalProp {
   onRoad: string | undefined;
@@ -34,7 +35,7 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
   const onRoadPrice = onRoad ? Number(onRoad.replace(/,/g, "")) : 0;
 
   const [downPayment, setDownPayment] = useState(
-    Math.round(onRoadPrice * 20) / 100
+    Math.round(onRoadPrice * 20 / 100)
   );
   const [tenure, setTenure] = useState(3);
   const [interestRate, setInterestRate] = useState(9);
@@ -157,7 +158,9 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                   </div>
                 </div>
               </div>
-              <div className="md:flex-1/2"></div>
+              <div className="flex md:flex-1/2 justify-center items-center text-center">
+                <PieChart loanAmount={(onRoadPrice - downPayment)} interestRate={interestRate} tenure={tenure} />
+              </div>
             </div>
           </div>
         </Box>
