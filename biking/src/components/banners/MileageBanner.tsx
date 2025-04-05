@@ -78,7 +78,7 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
             </div>
             <div className="md:flex-1/5">
               <span className="text-xs">
-                * Petrol price considered ₹103.5/litre
+                *Petrol price considered at ₹103.5/litre
               </span>
               <Typography fontSize={18} variant={"body1"}>
                 ₹{" "}

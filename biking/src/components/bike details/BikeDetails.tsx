@@ -52,22 +52,22 @@ const BikeDetails: React.FC = () => {
           <div className="pr-1">
             <StarRating />
           </div>
-          &bull;
+          <div className="pt-[5px]">&bull;</div>
           <div className="px-1">
             <Typography
               fontSize={14}
-              paddingTop={"6px"}
+              paddingTop={"5px"}
               fontWeight={"bold"}
               color="#0080FF"
             >
               100 Ratings
             </Typography>
           </div>
-          &bull;
+          <div className="pt-[5px]">&bull;</div>
           <div className="px-1">
             <Typography
               fontSize={14}
-              paddingTop={"6px"}
+              paddingTop={"5px"}
               fontWeight={"bold"}
               color="#0080FF"
             >
