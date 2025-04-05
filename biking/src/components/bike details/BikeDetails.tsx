@@ -9,6 +9,7 @@ import KeyFeatures from "./KeyFeatures";
 import { useParams } from "react-router-dom";
 import Bike from "../../interfaces/Bike";
 import EMIModal from "../utils/EMICalculatorModal";
+import StarRating from "../utils/StarRating";
 
 const BikeDetails: React.FC = () => {
   const { name } = useParams();
@@ -46,7 +47,36 @@ const BikeDetails: React.FC = () => {
         <Typography marginTop={2} fontSize={24} fontWeight={"bold"}>
           {bike?.name}
         </Typography>
+
+        <div className="flex items-center">
+          <div className="pr-1">
+            <StarRating />
+          </div>
+          &bull;
+          <div className="px-1">
+            <Typography
+              fontSize={14}
+              paddingTop={"6px"}
+              fontWeight={"bold"}
+              color="#0080FF"
+            >
+              100 Ratings
+            </Typography>
+          </div>
+          &bull;
+          <div className="px-1">
+            <Typography
+              fontSize={14}
+              paddingTop={"6px"}
+              fontWeight={"bold"}
+              color="#0080FF"
+            >
+              Write Review
+            </Typography>
+          </div>
+        </div>
       </div>
+
       <div className="md:flex">
         <div className="flex-1/2">
           <img
