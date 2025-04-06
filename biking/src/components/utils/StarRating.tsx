@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 
-const StarRating: React.FC = () => {
+interface StarRatingProp {
+  size: number;
+  readonly: boolean;
+}
+
+const StarRating: React.FC<StarRatingProp> = ({ size, readonly }) => {
   const [rating, setRating] = useState(4);
 
-  // Catch Rating value
   const handleRating = (rate: number) => {
     setRating(rate);
   };
@@ -19,12 +23,12 @@ const StarRating: React.FC = () => {
       <Rating
         onClick={handleRating}
         SVGstyle={{ display: "inline-block", paddingTop: 0 }}
-        size={20}
+        size={size}
         onPointerEnter={onPointerEnter}
         onPointerLeave={onPointerLeave}
         onPointerMove={onPointerMove}
         initialValue={rating}
-        readonly={true}
+        readonly={readonly}
         fillColor="#0080FF"
       />
     </div>

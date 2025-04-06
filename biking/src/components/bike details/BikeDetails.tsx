@@ -6,7 +6,7 @@ import UserReviewSummary from "./UserReviewSummary";
 import SimilarBikes from "./SimilarBikes";
 import UserReview from "./UserReview";
 import KeyFeatures from "./KeyFeatures";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Bike from "../../interfaces/Bike";
 import EMIModal from "../utils/EMICalculatorModal";
 import StarRating from "../utils/StarRating";
@@ -50,7 +50,7 @@ const BikeDetails: React.FC = () => {
 
         <div className="flex items-center">
           <div className="pr-1">
-            <StarRating />
+            <StarRating size={20} readonly={true} />
           </div>
           <div className="pt-[5px]">&bull;</div>
           <div className="px-1">
@@ -71,7 +71,7 @@ const BikeDetails: React.FC = () => {
               fontWeight={"bold"}
               color="#0080FF"
             >
-              Write Review
+              <Link to={`/checkout/review/${name}`}>Write Review</Link>
             </Typography>
           </div>
         </div>
