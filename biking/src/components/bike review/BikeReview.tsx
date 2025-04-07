@@ -70,7 +70,7 @@ const BikeReview: React.FC = () => {
           <img
             src={bike?.image}
             alt={bike?.name}
-            className="w-fit h-[118px] object-fit rounded pl-[30%] md:pl-0"
+            className="w-fit h-[118px] object-fit rounded pl-[25%] md:pl-0"
           />
           <CardContent className="bg-gray-50">
             <h2 className="text-md font-semibold">{`${bike?.name} (Base)`}</h2>
@@ -83,7 +83,7 @@ const BikeReview: React.FC = () => {
             </p>
             <span className="text-sm mb-2">On-Road Price in Mumbai</span>
           </CardContent>
-          <div className="my-auto text-center">
+          <div className="md:my-auto text-center py-8">
             <Typography fontWeight={"bold"}>
               How much would you rate this bike?
             </Typography>
@@ -92,42 +92,42 @@ const BikeReview: React.FC = () => {
         </Card>
       </div>
       <div className="md:flex md:justify-between text-center mt-10">
-        <div className="p-1">
+        <div className="p-1 my-3">
           <Typography
             fontSize={18}>
             Style & Design
           </Typography>
           <StarRating size={25} readonly={false} />
         </div>
-        <div className="p-1">
+        <div className="p-1 my-3">
           <Typography
             fontSize={18}>
             Reliability
           </Typography>
           <StarRating size={25} readonly={false} />
         </div>
-        <div className="p-1">
+        <div className="p-1 my-3">
           <Typography
             fontSize={18}>
             Comfort
           </Typography>
           <StarRating size={25} readonly={false} />
         </div>
-        <div className="p-1">
+        <div className="p-1 my-3">
           <Typography
             fontSize={18}>
             Service Experience
           </Typography>
           <StarRating size={25} readonly={false} />
         </div>
-        <div className="p-1">
+        <div className="p-1 my-3">
           <Typography
             fontSize={18}>
             Value for Money
           </Typography>
           <StarRating size={25} readonly={false} />
         </div>
-        <div className="p-1">
+        <div className="p-1 my-3">
           <Typography
             fontSize={18}>
             Performance
@@ -135,11 +135,11 @@ const BikeReview: React.FC = () => {
           <StarRating size={25} readonly={false} />
         </div>
       </div>
-      <div className="mt-10">
+      <div className="mt-7">
         <form action="" method="post">
           <div className="md:flex md:justify-between">
             <div>
-              <label className="block font-medium mb-1">Enter your bike's mileage (kmpl)</label>
+              <label className="block font-medium mb-1 mt-3">Enter your bike's mileage (kmpl)</label>
               <input
                 type="number"
                 name="name"
@@ -149,7 +149,7 @@ const BikeReview: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block font-medium mb-1">Name</label>
+              <label className="block font-medium mb-1 mt-3">Name</label>
               <input
                 type="text"
                 name="name"
@@ -159,7 +159,7 @@ const BikeReview: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block font-medium mb-1">Email ID</label>
+              <label className="block font-medium mb-1 mt-3">Email ID</label>
               <input
                 type="text"
                 name="name"
