@@ -1,8 +1,12 @@
 import { Button, Card, CardContent, Typography } from "@mui/material";
 import StarRating from "../utils/StarRating";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Bike from "../../interfaces/Bike";
+import { useParams } from "react-router-dom";
 
 const BikeReview: React.FC = () => {
+
+  const { name } = useParams();
 
   const [isUnder5000, setIsUnder5000] = useState(false);
   const [isUnder15000, setIsUnder15000] = useState(false);
@@ -36,6 +40,20 @@ const BikeReview: React.FC = () => {
     }
   }
 
+  const [bike, setBikes] = useState<Bike>();
+  
+  useEffect(() => {
+      fetch(
+        `https://biking-production.up.railway.app/api/v1/bike/name?bikeName=${name}`
+      ) // Replace with real API
+        .then((res) => res.json())
+        .then((data) => {
+          setBikes(data);
+          console.log(data);
+        })
+        .catch((err) => console.error("Error fetching bike:", err));
+    }, []);
+
   return (
     <div className="lg:px-40 px-4">
       <Typography marginTop={2} fontSize={24} fontWeight={"bold"}>Rate & Review</Typography>
@@ -50,18 +68,18 @@ const BikeReview: React.FC = () => {
           }}
         >
           <img
-            src={"/images/bikes/himalayan.jpg"}
-            alt={"bike.name"}
+            src={bike?.image}
+            alt={bike?.name}
             className="w-fit h-[118px] object-fit rounded pl-[30%] md:pl-0"
           />
           <CardContent className="bg-gray-50">
-            <h2 className="text-md font-semibold">{"Yamaha (Base)"}</h2>
+            <h2 className="text-md font-semibold">{`${bike?.name} (Base)`}</h2>
             <p className="text-bold text-black text-sm mb-2">
-              {"155 cc"} &bull; {"30 kmpl"} &bull; {"24 ps "}
-              &bull; {"130 kg"}
+              {bike?.engineCapacity} &bull; {bike?.mileageARAI} &bull; {bike?.power}{" "}
+              &bull; {bike?.kerbWeight}
             </p>
             <p className="text-md font-semibold flex">
-              ₹ {"1,94,180"} <span className="pl-1">Onwards</span>
+              ₹ {bike?.onRoadPrice} <span className="pl-1">Onwards</span>
             </p>
             <span className="text-sm mb-2">On-Road Price in Mumbai</span>
           </CardContent>
@@ -171,7 +189,7 @@ const BikeReview: React.FC = () => {
             />
           </div>
           <div>
-            <label className="block font-medium mt-3">How much have you ridden the bike?</label>
+            <label className="block font-medium mt-3 mb-1">How much have you ridden the bike?</label>
             <div className="flex">
               <Button
                 variant="text"
