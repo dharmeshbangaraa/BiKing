@@ -50,7 +50,7 @@ const BikeDetails: React.FC = () => {
 
         <div className="flex items-center">
           <div className="pr-1">
-            <StarRating size={20} readonly={true} />
+            <StarRating size={20} readonly={true} id={"bikeRating"} />
           </div>
           <div className="pt-[5px]">&bull;</div>
           <div className="px-1">
