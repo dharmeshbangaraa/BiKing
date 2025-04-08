@@ -10,6 +10,7 @@ import { Link, useParams } from "react-router-dom";
 import Bike from "../../interfaces/Bike";
 import EMIModal from "../utils/EMICalculatorModal";
 import StarRating from "../utils/StarRating";
+import BikeReview from "../../interfaces/BikeReview";
 
 const BikeDetails: React.FC = () => {
   const { name } = useParams();
@@ -17,6 +18,7 @@ const BikeDetails: React.FC = () => {
 
   const [bike, setBikes] = useState<Bike>();
   const [open, setOpen] = useState(false);
+  const [reviews, setReviews] = useState<BikeReview[]>();
 
   useEffect(() => {
     fetch(
@@ -25,10 +27,30 @@ const BikeDetails: React.FC = () => {
       .then((res) => res.json())
       .then((data) => {
         setBikes(data);
-        console.log(data);
+        console.log(reviews);
       })
       .catch((err) => console.error("Error fetching bike:", err));
   }, []);
+
+  useEffect(() => {
+    fetch(
+      `https://biking-production.up.railway.app/api/v1/bike/review/name?bikeName=${name}`
+    ) // Replace with real API
+      .then((res) => res.json())
+      .then((data) => {
+        setReviews(data);
+        console.log("u review", data);
+      })
+      .catch((err) => console.error("Error fetching bike:", err));
+  }, []);
+
+  const toggleExpand = (id: number) => {
+    setReviews((prev) =>
+      prev?.map((review) =>
+        review.id === id ? { ...review, expanded: !review.expanded } : review
+      )
+    );
+  };
 
   const calculatePercentage = () => {
     if (!bike?.exPrice) return "0";
@@ -197,7 +219,20 @@ const BikeDetails: React.FC = () => {
         <SimilarBikes />
       </div>
       <div>
-        <UserReview id={bike?.id} name={bike?.name} />
+        <div>
+          <Typography
+            marginTop={2}
+            fontSize={20}
+            fontWeight={"bold"}
+            data-testid="user-review-heading"
+          >
+            {" "}
+            {bike?.name} - User Reviews
+          </Typography>
+        </div>
+        {reviews?.map((review) => (
+          <UserReview key={review.id} {...review} toggleExpand={toggleExpand} />
+        ))}
       </div>
     </div>
   );
