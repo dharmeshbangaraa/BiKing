@@ -4,13 +4,21 @@ import { Rating } from "react-simple-star-rating";
 interface StarRatingProp {
   size: number;
   readonly: boolean;
+  onChange?: (id: string, rating: number) => void;
+  id: string;
 }
 
-const StarRating: React.FC<StarRatingProp> = ({ size, readonly }) => {
-  const [rating, setRating] = useState(4);
+const StarRating: React.FC<StarRatingProp> = ({
+  size,
+  readonly,
+  onChange,
+  id,
+}) => {
+  const [rating, setRating] = useState(0);
 
   const handleRating = (rate: number) => {
     setRating(rate);
+    onChange?.(id, rate);
   };
 
   const onPointerEnter = () => console.log("Enter");
