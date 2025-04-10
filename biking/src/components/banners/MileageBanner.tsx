@@ -82,10 +82,8 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
               </span>
               <Typography fontSize={18} variant={"body1"}>
                 ₹{" "}
-                {(
-                  (km / Number(mileageARAI?.split(" ")[0])) *
-                  103.5 *
-                  30
+                {Math.round(
+                  (km / Number(mileageARAI?.split(" ")[0])) * 103.5 * 30
                 ).toLocaleString()}
                 * / month
               </Typography>
