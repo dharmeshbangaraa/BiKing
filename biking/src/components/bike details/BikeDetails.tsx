@@ -29,7 +29,6 @@ const BikeDetails: React.FC = () => {
       })
       .catch((err) => console.error("Error fetching bike:", err));
   }, []);
-  
 
   useEffect(() => {
     fetch(
@@ -43,40 +42,62 @@ const BikeDetails: React.FC = () => {
   }, []);
 
   const avgStyleAndDesign = (): number => {
-    if(reviews?.length == 0 || reviews?.length == undefined) return 0;
-    const totalStyleAndDesign = reviews?.map((review) => review.styleAndDesign).reduce((acc, curr) => acc + curr, 0);
-    return (totalStyleAndDesign / reviews?.length);
-  }
+    if (reviews?.length == 0 || reviews?.length == undefined) return 0;
+    const totalStyleAndDesign = reviews
+      ?.map((review) => review.styleAndDesign)
+      .reduce((acc, curr) => acc + curr, 0);
+    return totalStyleAndDesign / reviews?.length;
+  };
 
   const avgComfort = (): number => {
-    if(reviews?.length == 0 || reviews?.length == undefined) return 0;
-    const totalComfort = reviews?.map((review) => review.comfort).reduce((acc, curr) => acc + curr, 0);
-    return (totalComfort / reviews?.length);
-  }
+    if (reviews?.length == 0 || reviews?.length == undefined) return 0;
+    const totalComfort = reviews
+      ?.map((review) => review.comfort)
+      .reduce((acc, curr) => acc + curr, 0);
+    return totalComfort / reviews?.length;
+  };
 
   const avgPerformance = (): number => {
-    if(reviews?.length == 0 || reviews?.length == undefined) return 0;
-    const totalPerformance = reviews?.map((review) => review.performance).reduce((acc, curr) => acc + curr, 0);
-    return (totalPerformance / reviews?.length);
-  }
+    if (reviews?.length == 0 || reviews?.length == undefined) return 0;
+    const totalPerformance = reviews
+      ?.map((review) => review.performance)
+      .reduce((acc, curr) => acc + curr, 0);
+    return totalPerformance / reviews?.length;
+  };
 
   const avgReliability = (): number => {
-    if(reviews?.length == 0 || reviews?.length == undefined) return 0;
-    const totalReliability = reviews?.map((review) => review.reliability).reduce((acc, curr) => acc + curr, 0);
-    return (totalReliability / reviews?.length);
-  }
+    if (reviews?.length == 0 || reviews?.length == undefined) return 0;
+    const totalReliability = reviews
+      ?.map((review) => review.reliability)
+      .reduce((acc, curr) => acc + curr, 0);
+    return totalReliability / reviews?.length;
+  };
 
   const avgServiceExperience = (): number => {
-    if(reviews?.length == 0 || reviews?.length == undefined) return 0;
-    const totalServiceExperience = reviews?.map((review) => review.serviceExperience).reduce((acc, curr) => acc + curr, 0);
-    return (totalServiceExperience / reviews?.length);
-  }
+    if (reviews?.length == 0 || reviews?.length == undefined) return 0;
+    const totalServiceExperience = reviews
+      ?.map((review) => review.serviceExperience)
+      .reduce((acc, curr) => acc + curr, 0);
+    return totalServiceExperience / reviews?.length;
+  };
 
   const avgValueForMoney = (): number => {
-    if(reviews?.length == 0 || reviews?.length == undefined) return 0;
-    const totalValueForMoney = reviews?.map((review) => review.valueForMoney).reduce((acc, curr) => acc + curr, 0);
-    return (totalValueForMoney / reviews?.length);
-  }
+    if (reviews?.length == 0 || reviews?.length == undefined) return 0;
+    const totalValueForMoney = reviews
+      ?.map((review) => review.valueForMoney)
+      .reduce((acc, curr) => acc + curr, 0);
+    return totalValueForMoney / reviews?.length;
+  };
+
+  const bikeRating = Math.floor(
+    (avgComfort() +
+      avgPerformance() +
+      avgReliability() +
+      avgServiceExperience() +
+      avgStyleAndDesign() +
+      avgValueForMoney()) /
+      6
+  );
 
   const toggleExpand = (id: number) => {
     setReviews((prev) =>
@@ -106,7 +127,12 @@ const BikeDetails: React.FC = () => {
 
         <div className="flex items-center">
           <div className="pr-1">
-            <StarRating size={20} readonly={true} id={"bikeRating"} />
+            <StarRating
+              size={20}
+              readonly={true}
+              id={"bikeRating"}
+              value={bikeRating}
+            />
           </div>
           <div className="pt-[5px]">&bull;</div>
           <div className="px-1">
@@ -116,7 +142,7 @@ const BikeDetails: React.FC = () => {
               fontWeight={"bold"}
               color="#0080FF"
             >
-              100 Ratings
+              {reviews?.length} Ratings
             </Typography>
           </div>
           <div className="pt-[5px]">&bull;</div>
@@ -247,7 +273,16 @@ const BikeDetails: React.FC = () => {
         />
       </div>
       <div>
-        <UserReviewSummary id={bike?.id} name={bike?.name} avgStyleAndDesign={avgStyleAndDesign()} avgReliability={avgReliability()} avgComfort={avgComfort()} avgServiceExperience={avgServiceExperience()} avgValueForMoney={avgValueForMoney()} avgPerformance={avgPerformance()} />
+        <UserReviewSummary
+          id={bike?.id}
+          name={bike?.name}
+          avgStyleAndDesign={avgStyleAndDesign()}
+          avgReliability={avgReliability()}
+          avgComfort={avgComfort()}
+          avgServiceExperience={avgServiceExperience()}
+          avgValueForMoney={avgValueForMoney()}
+          avgPerformance={avgPerformance()}
+        />
       </div>
       <div>
         <SimilarBikes />

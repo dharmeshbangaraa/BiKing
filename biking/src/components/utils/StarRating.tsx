@@ -6,6 +6,7 @@ interface StarRatingProp {
   readonly: boolean;
   onChange?: (id: string, rating: number) => void;
   id: string;
+  value?: number;
 }
 
 const StarRating: React.FC<StarRatingProp> = ({
@@ -13,6 +14,7 @@ const StarRating: React.FC<StarRatingProp> = ({
   readonly,
   onChange,
   id,
+  value,
 }) => {
   const [rating, setRating] = useState(0);
 
@@ -35,7 +37,7 @@ const StarRating: React.FC<StarRatingProp> = ({
         onPointerEnter={onPointerEnter}
         onPointerLeave={onPointerLeave}
         onPointerMove={onPointerMove}
-        initialValue={rating}
+        initialValue={value ?? rating}
         readonly={readonly}
         fillColor="#0080FF"
       />
