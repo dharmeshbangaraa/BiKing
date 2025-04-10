@@ -3,14 +3,14 @@ import Grid from "@mui/material/Grid2";
 import CircularRatingBar from "../utils/CircularRatingBar";
 import IBikeReviewSummary from "../../interfaces/BikeReviewSummary";
 
-const UserReviewSummary: React.FC<IBikeReviewSummary> = ({ name }) => {
-  const userReviewParams = [
-    "Style & Design",
-    "Reliability",
-    "Comfort",
-    "Service experience",
-    "Value for money",
-    "Performance",
+const UserReviewSummary: React.FC<IBikeReviewSummary> = ({ name, avgStyleAndDesign, avgComfort, avgPerformance, avgReliability, avgServiceExperience, avgValueForMoney }) => {
+  const userReviewParams: {name: string, value: number}[] = [
+    { name: "Style & Design", value: avgStyleAndDesign },
+    { name: "Reliability", value: avgReliability },
+    { name: "Comfort", value: avgComfort },
+    { name: "Service Experience", value: avgServiceExperience },
+    { name: "Value for money", value: avgValueForMoney },
+    { name: "Performance", value: avgPerformance },
   ];
 
   return (
@@ -47,7 +47,7 @@ const UserReviewSummary: React.FC<IBikeReviewSummary> = ({ name }) => {
         >
           {userReviewParams.map((param) => (
             <Grid
-              key={param}
+              key={param.name}
               size={{
                 xs: 4,
                 sm: 6,
@@ -62,10 +62,10 @@ const UserReviewSummary: React.FC<IBikeReviewSummary> = ({ name }) => {
               }}
             >
               <div className="text-center flex justify-center md:p-4">
-                <CircularRatingBar size={"lg"} value={75} />
+                <CircularRatingBar size={"lg"} value={(param ? param.value : 0)} />
               </div>
               <div className="text-center p-1">
-                <h3 className="font-semibold">{param}</h3>
+                <h3 className="font-semibold">{param.name}</h3>
               </div>
             </Grid>
           ))}
