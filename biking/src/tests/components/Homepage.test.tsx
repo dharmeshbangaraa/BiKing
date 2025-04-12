@@ -27,7 +27,11 @@ describe("test should render every component of homepage successfully", () => {
   });
 
   it("test should render searchbar successfully", () => {
-    render(<Searchbar />);
+    render(
+      <MemoryRouter>
+        <Searchbar />
+      </MemoryRouter>
+    );
 
     expect(screen.getByRole("textbox")).toBeInTheDocument();
     expect(screen.getByRole("paragraph")).toBeInTheDocument();
