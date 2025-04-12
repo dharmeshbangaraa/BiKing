@@ -22,20 +22,21 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: 1000,
-    "@media (max-width: 600px)": {
-      width: 400,
-    },
+    width: "90vw",
+    maxWidth: 1000,
+    maxHeight: "90vh",
+    overflowY: "auto",
     bgcolor: "background.paper",
     border: "2px solid #000",
     boxShadow: 24,
     p: 3,
+    borderRadius: 2,
   };
 
   const onRoadPrice = onRoad ? Number(onRoad.replace(/,/g, "")) : 0;
 
   const [downPayment, setDownPayment] = useState(
-    Math.round(onRoadPrice * 20 / 100)
+    Math.round((onRoadPrice * 20) / 100)
   );
   const [tenure, setTenure] = useState(3);
   const [interestRate, setInterestRate] = useState(9);
@@ -88,7 +89,8 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                       value={downPayment.toLocaleString()}
                       className="border-0"
                       sx={{
-                        width: 500,
+                        width: "100%",
+                        maxWidth: 500,
                         "@media (max-width: 600px)": {
                           width: "100%",
                         },
@@ -159,7 +161,11 @@ const EMIModal: React.FC<ModalProp> = ({ onRoad, bikeName, onClose }) => {
                 </div>
               </div>
               <div className="flex md:flex-1/2 justify-center items-center text-center">
-                <PieChart loanAmount={(onRoadPrice - downPayment)} interestRate={interestRate} tenure={tenure} />
+                <PieChart
+                  loanAmount={onRoadPrice - downPayment}
+                  interestRate={interestRate}
+                  tenure={tenure}
+                />
               </div>
             </div>
           </div>

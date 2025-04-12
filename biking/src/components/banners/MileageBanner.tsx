@@ -33,12 +33,12 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
           <div className="md:text-left">
             <span className="text-xs font-bold">Select kms ridden per day</span>
           </div>
-          <div className="md:flex md:flex-4/5 mt-1 justify-center">
+          <div className="flex flex-wrap justify-center items-center">
             <div>
               <Button
                 variant="text"
                 color="primary"
-                sx={{ border: 1, borderRadius: 2 }}
+                sx={{ border: 1, borderRadius: 2, padding: 0 }}
                 onClick={() => setKm(10)}
               >
                 10
@@ -46,7 +46,7 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
               <Button
                 variant="text"
                 color="primary"
-                sx={{ border: 1, borderRadius: 2, marginLeft: 1 }}
+                sx={{ border: 1, borderRadius: 2, marginLeft: 1, padding: 0 }}
                 onClick={() => setKm(20)}
               >
                 20
@@ -54,7 +54,7 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
               <Button
                 variant="text"
                 color="primary"
-                sx={{ border: 1, borderRadius: 2, marginLeft: 1 }}
+                sx={{ border: 1, borderRadius: 2, marginLeft: 1, padding: 0 }}
                 onClick={() => setKm(30)}
               >
                 30
@@ -62,7 +62,7 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
               <Button
                 variant="text"
                 color="primary"
-                sx={{ border: 1, borderRadius: 2, marginLeft: 1 }}
+                sx={{ border: 1, borderRadius: 2, marginLeft: 1, padding: 0 }}
                 onClick={() => setKm(40)}
               >
                 40
@@ -70,7 +70,7 @@ const MileageBanner: React.FC<IBikeMileage> = ({ name, mileageARAI }) => {
               <Button
                 variant="text"
                 color="primary"
-                sx={{ border: 1, borderRadius: 2, marginLeft: 1 }}
+                sx={{ border: 1, borderRadius: 2, marginLeft: 1, padding: 0 }}
                 onClick={() => setKm(50)}
               >
                 50

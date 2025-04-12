@@ -42,7 +42,7 @@ const BikeReview: React.FC = () => {
     if (isUnder5000) return "0-5000";
     else if (isUnder15000) return "5000-15000";
     else if (above15000) return "15000+";
-    else if (isNeverOwned) return "Never Owned";
+    else if (isNeverOwned) return "0";
   }
 
   const [bike, setBikes] = useState<Bike>();
