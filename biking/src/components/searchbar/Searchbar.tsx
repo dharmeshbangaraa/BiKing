@@ -91,7 +91,7 @@ const Searchbar: React.FC = () => {
                 <div className="flex justify-between w-full items-center">
                   <span className="text-sm text-gray-800">{bike}</span>
                   <span className="text-blue-600 text-sm font-medium">
-                    Checkout bike
+                    check out
                   </span>
                 </div>
               </ListItemButton>
