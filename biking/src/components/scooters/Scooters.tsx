@@ -14,7 +14,7 @@ const Scooters: React.FC<scooterCategory> = ({ selectedCategory }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("https://biking-production.up.railway.app/api/v1/bike/")
+    fetch("https://bikingcom-production.up.railway.app/api/v1/bike/")
       .then((res) => res.json())
       .then((data) => setScooter(data))
       .catch((err) => console.error("Error fetching scooters:", err));

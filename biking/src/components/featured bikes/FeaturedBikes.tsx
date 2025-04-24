@@ -17,7 +17,7 @@ const FeaturedBike: React.FC = () => {
   );
 
   useEffect(() => {
-    fetch("https://biking-production.up.railway.app/api/v1/bike/") // Replace with real API
+    fetch("https://bikingcom-production.up.railway.app/api/v1/bike/") // Replace with real API
       .then((res) => res.json())
       .then((data) => {
         setBikes(data);

@@ -21,7 +21,7 @@ const BikeDetails: React.FC = () => {
 
   useEffect(() => {
     fetch(
-      `https://biking-production.up.railway.app/api/v1/bike/name?bikeName=${name}`
+      `https://bikingcom-production.up.railway.app/api/v1/bike/name?bikeName=${name}`
     ) // Replace with real API
       .then((res) => res.json())
       .then((data) => {
@@ -32,7 +32,7 @@ const BikeDetails: React.FC = () => {
 
   useEffect(() => {
     fetch(
-      `https://biking-production.up.railway.app/api/v1/bike/review/name?bikeName=${name}`
+      `https://bikingcom-production.up.railway.app/api/v1/bike/review/name?bikeName=${name}`
     ) // Replace with real API
       .then((res) => res.json())
       .then((data) => {

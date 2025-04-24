@@ -256,7 +256,7 @@ const BikeList: React.FC = () =&gt; {
   const [bikes, setBikes] = useState&lt;Bike[]&gt;();
 &nbsp;
   useEffect(() =&gt; {
-    fetch(`https://biking-production.up.railway.app/api/v1/bike/`) // Replace with real API
+    fetch(`https://bikingcom-production.up.railway.app/api/v1/bike/`) // Replace with real API
       .then((res) =&gt; res.json())
       .then((data) =&gt; {
         setBikes(data);
